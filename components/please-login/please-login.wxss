@@ -1,0 +1,19 @@
+/* components/please-login/please-login.wxss */
+.content{
+    width: 100%;
+    height: 100rpx;
+    /* border: 2rpx solid #bfa; */
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 34rpx;
+}
+.img{
+    width: 80rpx;
+    height: 80rpx;
+    margin:0 24rpx 0 50rpx;
+}
+image{
+    width:100%;
+    height: 100%;
+}

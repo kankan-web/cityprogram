@@ -1,0 +1,8 @@
+<!--components/form-title/form-title.wxml-->
+<view class="content">
+    <text class="mark"></text>
+    {{title}}
+    <view class="icon-wrap">
+        <slot></slot>
+    </view>
+</view>

@@ -1,0 +1,45 @@
+<view class="content">
+    <view class="info">
+        <form-title title="保修信息" >
+            <view class="mark warn clear">报修</view>
+        </form-title>
+        <input-item title="时间" types="compact">
+            <view>2022-10-17  17:01:08</view>
+        </input-item>
+        <view class="line"></view>
+        <input-item title="地点"  types="compact">
+            <view>思明区厦港街道鸿山社区委员会</view>
+        </input-item>
+        <view class="line"></view>
+        <input-item title="电话"  types="compact">
+            <view>13799161275</view>
+        </input-item>
+        <view class="line"></view>
+        <input-item title="类型"  types="compact">
+            <view>公共设施损害</view>
+        </input-item>
+    </view>
+    <view class="detail">
+        <form-title title="保修详情">
+        </form-title>
+        <view class="detail-info">
+            <view class="detail-text">
+                稀土高新区公用事业管理局邀请市民通过市政小程序积极参与市政设施、园林绿化、环境卫生问题的发现与上报，发现问题及时处理。市政随手拍涉及园林绿化、公园广场、道路破坏、井盖损坏、环卫垃圾、供热燃气、供水、排水等方面的事件，通过市政随手拍小程序的使用，创新公用事业管理模式，不但提升公用事业管理能力和水平，也提高了市民积极参与城市管理与建设热情
+            </view>
+            <view class="detail-img">
+                <view class="detail-img-wrap">
+                    <image src="/assets/image/e-1.png"></image>
+                </view>
+                <view class="detail-img-wrap">
+                    <image src="/assets/image/e-1.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="feedback">
+        <input-item title="反馈" types="compact">
+            <textarea class="desc-input" placeholder="请详细描述故障状况" />
+        </input-item>
+    </view>
+    <button class="btn">反馈</button>
+</view>

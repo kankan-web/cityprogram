@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "please-login":"/components/please-login/please-login",
+        "cpn-module":"/components/cpn-module/cpn-module",
+        "info-show":"/components/info-show/info-show"
+    }
+}

@@ -1,0 +1,25 @@
+<view class="info-show">
+        <view class="info-show-avatar">
+            <view class="info-show-avatar-img">
+                <image src="/assets/image/f-1.png"></image>
+            </view>
+            <view class="info-show-avatar-name">
+                和田玉（市政部长）
+            </view>
+            <view class="info-show-avatar-time">
+                2021-08-04
+            </view>
+        </view>
+        <view class="info-show-text">
+            稀土高新区公用事业管理局邀请市民通过市政小程序积极参与市政设施
+            、园林绿化、环境卫生问题的发现与上报，发现问题及时处理。市政随手拍涉及园林绿化、公园广场、道路破坏、井盖损坏、环卫垃圾、供热燃气、供水、排水等方面的事件，通过市政随手拍小程序的使用，创新公用事业管理模式，不但提升公用事业管理能力和水平，也提高了市民积极参与城市管理与建设热情
+        </view>
+        <view class="info-show-img clear">
+            <view class="info-show-img-warp">
+                <image src="/assets/image/e-1.png"></image>
+            </view>
+            <view class="info-show-img-warp">
+                <image src="/assets/image/e-2.png"></image>
+            </view>
+        </view>
+    </view>

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "input-item":"/components/input-item/input-item"
+    },
+    "navigationBarBackgroundColor": "#6886ce",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "设施报修",
+    "backgroundTextStyle": "light"
+}

@@ -1,0 +1,138 @@
+/* pages/home/index.wxss */
+.content{
+    width: 100%;
+    background-color: #f7f7f7;
+}
+/* 头部设置 */
+.header{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: 196rpx;
+    background-color: #6886ce;
+}
+.bkg{
+    width: 100%;
+    height: 96rpx;
+    border-radius:0 0 50% 50% ;  
+    background-color: #6886ce;
+}
+/* main-card设置 */
+.main-card{
+    width: 90%;
+    height: 316rpx;
+    margin:-160rpx 5% 0 5%;
+}
+.main-card-img{
+    width: 100%;
+    height: 316rpx;
+}
+
+/* main-card-title设置 */
+.main-card-title{
+    width: 100%;
+    height: 316rpx;
+    margin-top:-316rpx;
+    position: relative;
+    color: #fff;
+}
+.title{
+    position: absolute;
+    left: 20rpx;
+    top: 18rpx;
+    font-weight: 700;
+    height:0px;
+    font-size: 64rpx;
+}
+.sub-title{
+    position: absolute;
+    top:120rpx;
+    left: 20rpx;
+    font-weight: 600;
+    font-size: 36rpx;
+}
+.explain{
+    position: absolute;
+    bottom: 10rpx;
+    left: 20rpx;
+    font-size: 20rpx;
+    color: #6886ce;
+} 
+/* borad部分 */
+.board{
+    height: 64rpx;
+    width: 90%;
+    margin: 20rpx auto;
+    background-color: #fff;
+    border-radius: 16rpx;
+}
+.board-img{
+    height: 100%;
+    width:82rpx;
+    background-color: #6984d5;
+    float: left;
+    border-radius:16rpx;
+}
+.border-img-warp{
+    width: 61rpx;
+    height:61rpx;
+    margin-left: 8rpx;
+}
+.board-text{
+    float: left;
+    line-height: 64rpx;
+    color:#6886ce ;
+    margin-left: 10rpx;
+    font-size:28rpx;
+}
+/* 模块设置 */
+.function{
+    display: flex;
+    justify-content: space-between;
+    /* border:2rpx solid #000; */
+    padding: 0 40rpx;
+}
+.func-module1{
+    background-color: #7768cd;
+    width: 48%;
+    border-radius: 16rpx;
+
+}
+.func-module2{
+    background-color:#6686c8;
+    width: 48%;
+    border-radius: 16rpx;
+}
+/* cooperation部分 */
+.cooperation{
+    width: 100%;
+    background-color: #fff;
+    height: 82rpx;
+    margin-top: 24rpx;
+}
+.coo-img{
+    width: 56rpx;
+    height: 56rpx;
+    margin: 10rpx 18rpx;
+    /* margin-left: 18rpx; */
+    float: left;
+}
+.coo-text{
+    height: 100%;
+    line-height: 80rpx;
+    float: left;
+    font-weight: 600;
+    font-size: 30rpx;
+    color: #6886ce;
+}
+.coo-icon{
+    width: 56rpx;
+    height: 56rpx;
+    margin: 10rpx 24rpx;
+    float: right;
+}
+/* info部分 */
+.info{
+    padding-bottom: 30rpx;
+}

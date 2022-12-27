@@ -1,0 +1,9 @@
+<!--components/tab-bar/tab-bar.wxml-->
+<view class="content">
+    <view class="{{currentTab===index? 'active':''}} title" 
+        wx:for="{{title}}" 
+        wx:key="*this"
+        bindtap="changeTab"
+        data-index="{{index}}"
+    >{{item}}</view>
+</view>

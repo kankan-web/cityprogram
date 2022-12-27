@@ -1,0 +1,7 @@
+<!--components/please-login/please-login.wxml-->
+<view class="content">
+    <view class="img">
+        <image src="{{src}}"></image>
+    </view>
+    <view class="text">{{name}}</view>
+</view>

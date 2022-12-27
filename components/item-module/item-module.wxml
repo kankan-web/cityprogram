@@ -1,0 +1,32 @@
+<view class="content" bindtap="onBtnClick" data-num="{{info.serialNum}}">
+    <view class="header">
+      <text>诉求编号：{{info.serialNum}}</text>
+      <text>待审核  ></text>
+    </view>
+    <view class="line"></view>
+    <view class="main">
+      <view class="clear">
+        <view class="name">
+            市政亲民小程序
+        </view>
+        <view class="mark {{info.statu==='需审核'?'warn':'primary'}} clear">{{info.type}}</view>
+      </view>
+      <view class="address">
+        <view class="address-icon">
+            <image src="/assets/image/收货地址.png"></image>
+        </view>
+        {{info.address}}
+      </view>
+      <view class="time">
+        <view class="time-icon">
+            <image src="/assets/image/时间.png"></image>
+        </view>
+        <view class="time-year">
+           {{info.date}}
+        </view>
+        <view class="time-time">
+           {{info.time}}
+        </view>
+      </view>
+    </view>
+</view>

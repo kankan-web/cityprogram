@@ -1,0 +1,6 @@
+<view class="content clear">
+    <text class="title">{{title}}{{types?":":""}}</text>
+    <view class="input {{types?'words':''}}">
+        <slot></slot>
+    </view>
+</view>

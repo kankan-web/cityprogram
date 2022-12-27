@@ -1,0 +1,28 @@
+/* components/input-item/input-item.wxss */
+.content{
+    padding: 20rpx;
+    color: #686868;
+    position: relative;
+}
+.title{
+    float: left;
+    margin-right:0rpx;
+    font-size: 30rpx;
+}
+.input{
+    float: right;
+    width: 75%;
+    margin-left:30rpx;
+}
+.words{
+    float: left;
+    width: 75%;
+}
+/* 清除浮动 */
+.clear::after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}

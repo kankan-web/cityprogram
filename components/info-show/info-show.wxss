@@ -1,0 +1,45 @@
+.info-show{
+    width: 100%;
+    margin-top: 30rpx;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+    padding-bottom: 40rpx;
+}
+.info-show-avatar-img{
+    width: 70rpx;
+    height: 70rpx;
+}
+.info-show-avatar{
+    width: 100%;
+    padding: 20rpx 0 20rpx 30rpx;
+    display: flex;
+    align-items: center;
+    color: #6686c8;
+    font-weight: 600;
+}
+.info-show-avatar-name{
+    margin-left: 30rpx;
+}
+.info-show-avatar-time{
+    font-size: 24rpx;
+
+}
+/* text文字部分 */
+.info-show-text{
+    width: 86%;
+    margin:0 auto;
+    font-size: 30rpx;
+    color: #6886ce;
+}
+/* 图片设置 */
+.info-show-img{
+    width: 100%;
+}
+.info-show-img-warp{
+    width:40%;
+    height: 220rpx;
+    background-color: #6686c8;
+    margin-left: 50rpx;
+    margin-top: 40rpx;
+    display: inline-block;
+}

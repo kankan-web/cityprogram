@@ -1,0 +1,82 @@
+.content{
+    width: 100%;
+    background-color: #ffffff;
+}
+/* 头部设置 */
+.header{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: 100rpx;
+    background-color: #6886ce;
+}
+.welcome{
+    color: #ffffff;
+    font-size: 32rpx;
+    position: relative;
+    bottom: 30rpx;
+    left: 150rpx;
+    font-size: 28rpx;
+}
+.bkg{
+    width: 100%;
+    height: 96rpx;
+    border-radius:0 0 50% 50% ;  
+    background-color: #6886ce;
+}
+/* info部分 */
+.info{
+    width: 80%;
+    height: 260rpx;
+    margin: 30rpx auto;
+    padding-top: 10rpx;
+    box-shadow: 0 0 10px 0 #cccccc;
+    color: #333;
+}
+.info-name,.info-number{
+    /* border: 2rpx solid #6886ce; */
+    margin-top: 30rpx;
+    padding-left: 50rpx;
+}
+.detail{
+    float: right;
+    padding-right: 80rpx;
+}
+/* service */
+.service{
+    width: 74%;
+    height: 80rpx;
+    font-size: 36rpx;
+    line-height: 80rpx;
+    padding:0  20rpx;
+    margin: 50rpx 10% 50rpx 10%;
+    box-shadow: 0 0 10px 0 #cccccc;
+    color: #333;
+}
+.service-icon{
+    float: right;
+    margin-top: 10rpx;
+    margin-right: 20rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+/* inform */
+.inform{
+    width: 80%;
+    height: 260rpx;
+    margin: 30rpx auto;
+}
+.inform-title{
+    font-weight: 600;
+    margin-bottom: 20rpx;
+}
+.inform-main{
+    color: #333333;
+    font-size: 32rpx;
+}
+.technique{
+    width: 100%;
+    text-align: center;
+    font-size: 26rpx;
+}

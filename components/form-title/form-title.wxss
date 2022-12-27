@@ -1,0 +1,21 @@
+/* components/form-title/form-title.wxss */
+.content{
+    height: 60rpx;
+    padding-left: 30rpx;
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.mark{
+    display: inline-block;
+    width: 8rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    background-color: #6886ce;
+}
+.icon-wrap{
+    margin-left: 60%;
+    width: 50rpx;
+    height: 50rpx;
+}

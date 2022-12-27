@@ -1,0 +1,51 @@
+<view class="content">
+    <view class="header">
+        <view class="top">
+            <please-login/>
+        </view>
+        <view class="bkg"></view>
+    </view>
+    <view class="main-card">
+        <view class="main-card-img">
+            <image src="/assets/image/main_card.png"></image>
+        </view>
+        <view class="main-card-title">
+            <text class="title">市政一点通</text>
+            <text class="sub-title">更快捷更方便</text>
+            <text class="explain">Server to the public</text>
+        </view>
+    </view>
+    <view class="board">
+        <view class="board-img">
+            <view class="border-img-warp">
+                <image src="/assets/icon/声音_实体.png"></image>
+            </view>
+        </view>
+        <view class="board-text">市政、环卫、绿化</view>
+    </view>
+    <view class="function clear">
+        <block wx:for="{{page}}" wx:key="*this">
+            <cpn-module class="{{item.class}}" 
+                        title="{{item.name}}"
+                        explain="{{item.explain}}"
+                        src="{{item.src}}"
+                        page="{{item.page}}"
+            ></cpn-module>
+        </block>
+        
+        <!-- <cpn-module class="func-module2"></cpn-module> -->
+    </view>
+    <view class="cooperation">
+        <view class="coo-img">
+            <image src="/assets/image/图标1.png"></image>
+        </view>
+        <view class="coo-text">市政接入协作</view>
+        <view class="coo-icon">
+            <image src="/assets/image/分享.png"></image>
+        </view>
+    </view>
+    <view class="info">
+        <info-show></info-show>
+        <info-show></info-show>
+    </view>
+</view>
