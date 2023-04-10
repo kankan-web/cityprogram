@@ -1,0 +1,6 @@
+<!--components/star/star.wxml-->
+<view class="star_wrapper star_wrapper_{{starSize}}">
+  <view wx:for="{{star}}" wx:key="id" data-index="{{item.id}}" bindtap="grade">
+    <image class="image" src="{{item.id > score ? defaultSrc : activeSrc}}"></image>
+  </view>
+</view>

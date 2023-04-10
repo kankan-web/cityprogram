@@ -1,0 +1,46 @@
+<!--用户报修页面-->
+<view class="content">
+    <form bindsubmit="uploadFormData">
+        <view class="device-info">
+            <view class="content-item">
+                <text class="title">设备编号</text>
+                <input name="complainName" value="{{taskCode}}" placeholder="" />
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <text class="title">完成时间</text>
+                <input name="complainTel" value="{{messageDetail.finishTime}}" placeholder="请输入" />
+            </view>
+        </view>
+        <view class="evaluation">
+            <view class="content-item">
+                <text class="title">满意程度</text>
+                <view class="star-container">
+                    <star bind:getscoreI="getscoreI" score="{{stars[0].score}}" starIdx="{{stars[0].starIdx}}"></star>
+                </view>
+            </view>
+            <view class="content-item">
+                <text class="title">服务质量</text>
+                <view class="star-container">
+                    <star bind:getscoreII="getscoreII" score="{{stars[1].score}}" starIdx="{{stars[1].starIdx}}"></star>
+                </view>
+            </view>
+            <view class="content-item">
+                <text class="title">服务进度</text>
+                <view class="star-container">
+                    <star bind:getscoreIII="getscoreIII" score="{{stars[2].score}}" starIdx="{{stars[2].starIdx}}"></star>
+                </view>
+               
+            </view>
+        </view>
+        <view class="description">
+            <view class="content-item clear">
+                <text class="title">评价</text>
+                <view class="input">
+                    <textarea class="desc-input" name="complainDetail" value="{{detail}}" placeholder="描述一下你对这次服务的满意情况" />
+                </view>
+            </view>
+        </view>
+        <button class="btn" form-type="submit">上报</button>
+    </form>
+</view>

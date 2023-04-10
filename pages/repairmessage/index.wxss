@@ -1,0 +1,15 @@
+/* pages/appeal/index.wxss */
+.content{
+    width: 100%;
+    background-color: #fff;
+}
+/* swiper */
+.swiper-warp{
+  width: 95%;
+  height:1080rpx;
+  margin:20rpx auto;
+  background-color:#f6f6f6;
+}
+.swiper-main{
+  height: 100%;
+}

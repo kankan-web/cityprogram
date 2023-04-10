@@ -1,51 +1,52 @@
 <view class="content">
     <view class="header">
         <view class="top">
-            <please-login/>
-        </view>
-        <view class="bkg"></view>
-    </view>
-    <view class="main-card">
-        <view class="main-card-img">
-            <image src="/assets/image/main_card.png"></image>
-        </view>
-        <view class="main-card-title">
-            <text class="title">市政一点通</text>
-            <text class="sub-title">更快捷更方便</text>
-            <text class="explain">Server to the public</text>
+            <please-login isLogin="{{isLogin}}" loginInfo="{{personInfo}}"/>
         </view>
     </view>
-    <view class="board">
-        <view class="board-img">
-            <view class="border-img-warp">
-                <image src="/assets/icon/声音_实体.png"></image>
+    <!-- 功能模块 -->
+    <view class="function">
+        <view class="func-main" bindtap="handleFuncNav" data-src='{{funcmodel1[0].src}}'>
+            <view class="func-main-text">
+                <view class="func-main-text-title">{{funcmodel1[0].name}}</view>
+                <view class="func-main-text-explain">{{funcmodel1[0].desc}}</view>
+            </view>
+            <view class="func-main-image">
+                <image src="{{funcmodel1[0].img}}"></image>
             </view>
         </view>
-        <view class="board-text">市政、环卫、绿化</view>
-    </view>
-    <view class="function clear">
-        <block wx:for="{{page}}" wx:key="*this">
-            <cpn-module class="{{item.class}}" 
-                        title="{{item.name}}"
-                        explain="{{item.explain}}"
-                        src="{{item.src}}"
-                        page="{{item.page}}"
-            ></cpn-module>
-        </block>
-        
-        <!-- <cpn-module class="func-module2"></cpn-module> -->
-    </view>
-    <view class="cooperation">
-        <view class="coo-img">
-            <image src="/assets/image/图标1.png"></image>
+        <view>
+            <view class="func-advice" bindtap="handleFuncNav" data-src='{{funcmodel1[1].src}}'>
+                <view class="func-advice-text">{{funcmodel1[1].name}}</view>
+                <view class="func-advice-image">
+                    <image src="{{funcmodel1[1].img}}"></image>
+                </view>
+            </view>
+            <view class="func-help" bindtap="handleFuncNav" data-src='{{funcmodel1[2].src}}' >
+                <view class="func-help-text">{{funcmodel1[2].name}}</view>
+                <view class="func-help-image">
+                    <image src="{{funcmodel1[2].img}}"></image>
+                </view>
+            </view>
         </view>
-        <view class="coo-text">市政接入协作</view>
-        <view class="coo-icon">
-            <image src="/assets/image/分享.png"></image>
-        </view>
+    </view>
+    <view class="banner">
+        <!-- 轮播图部分 -->
+        <swiper autoplay="{{true}}" indicator-dots="{{true}}"> 
+            <block wx:for="{{background}}" wx:key="imgId">
+                <swiper-item>
+                    <image class="swipter-item" src="{{item.src}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
     </view>
     <view class="info">
-        <info-show></info-show>
-        <info-show></info-show>
+        <form-title title="社区公告"></form-title>
+        <block wx:for="{{notify}}" wx:key="id">
+            <info-show notifyItem="{{item}}"></info-show>
+        </block>
     </view>
+    <block>
+        <modal isshow="{{showModal}}" bind:changeIsShow="handleIsShow"></modal>
+    </block>
 </view>

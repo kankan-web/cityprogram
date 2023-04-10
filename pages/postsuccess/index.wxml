@@ -1,0 +1,35 @@
+<view class="container">
+    <block wx:if="{{stateId=='1'}}">
+        <view class="image-wrap">
+            <image src="../../assets/image/成功的引导.png" mode="" />
+        </view>
+        <view class="prompt">
+            表单提交成功
+        </view>
+        <view class="prompt">
+            两秒后自动跳转到消息
+        </view>
+    </block>
+    <block wx:elif="{{stateId=='0'}}">
+        <view class="image-wrap">
+            <image src="../../assets/image/重定向的引导.png" mode="" />
+        </view>
+        <view class="prompt">
+            表单提交成功
+        </view>
+        <view class="prompt">
+            两秒后自动跳转到报修页面
+        </view>
+    </block>
+    <block wx:elif="{{stateId=='2'}}">
+        <view class="image-wrap">
+            <image src="../../assets/image/成功的引导.png" mode="" />
+        </view>
+        <view class="prompt">
+            评价成功
+        </view>
+        <view class="prompt">
+            两秒后自动跳转到首页
+        </view>
+    </block>
+</view>

@@ -1,4 +1,4 @@
-<!--components/form-title/form-title.wxml-->
+<!-- 标题栏 -->
 <view class="content">
     <text class="mark"></text>
     {{title}}

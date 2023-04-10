@@ -14,7 +14,7 @@
     content: '';
     position: absolute;
     bottom: -16rpx;
-    left: 36%;
-    width: 50rpx;
-    border-bottom: 8rpx solid #6886ce;
+    left:25%;
+    width: 50%;
+    border-bottom: 8rpx solid #2cc793;
 }

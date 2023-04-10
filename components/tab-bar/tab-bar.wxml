@@ -2,8 +2,8 @@
 <view class="content">
     <view class="{{currentTab===index? 'active':''}} title" 
         wx:for="{{title}}" 
-        wx:key="*this"
+        wx:key="titleId"
         bindtap="changeTab"
         data-index="{{index}}"
-    >{{item}}</view>
+    >{{item.name}}</view>
 </view>

@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "image-upload":"/components/image-upload/image-upload",
+        "rate":"/components/rate/rate",
+        "star":"/components/star/star"
+    },
+    "navigationBarBackgroundColor": "#2cc793",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "评价",
+    "backgroundTextStyle": "light"
+}

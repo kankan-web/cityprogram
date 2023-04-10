@@ -3,7 +3,7 @@
         "please-login":"/components/please-login/please-login",
         "form-title":"/components/form-title/form-title"
     },
-    "navigationBarBackgroundColor": "#6886ce",
+    "navigationBarBackgroundColor": "#2cc793",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "个人中心",
     "backgroundTextStyle": "light"

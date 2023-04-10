@@ -1,0 +1,55 @@
+/* 上传图片 */
+.load-name {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.load-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.img-item, .img-add {
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+}
+.img-add {
+  border: 1px solid #ccc;
+}
+.img-add:after{
+  width: 1rpx;
+  height: 50rpx;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #ccc;
+}
+.img-add:before{
+  position: absolute;
+  top: 50%;
+  right: 31%;
+  width: 50rpx;
+  height: 1rpx;
+  content: " ";
+  display: inline-block;
+  background-color: #ccc;  
+}
+
+.img-item {
+  margin-right: 20rpx;
+}
+/* .img-item>image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+} */
+.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

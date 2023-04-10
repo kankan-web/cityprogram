@@ -1,0 +1,68 @@
+
+.content{
+    background-color: #2cc793;
+}
+.head {
+    padding-left: 80rpx;
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.title{
+    color: #FFFFFF;
+    font-size: 60rpx;
+    letter-spacing: 5rpx;
+    font-weight: bold;
+}
+.tip {
+    margin-top:30rpx;
+    color: #FFFFFF;
+    font-size: 40rpx;
+    letter-spacing: 5rpx;
+    font-weight: bold;
+}
+/*main部分  */
+.main{
+    background-color: white;
+    height: 50vh;
+    border-radius:50rpx 50rpx 0 0;
+    padding-top: 80rpx;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8rpx;
+    width: 140rpx;
+    height: 140rpx;
+    font-size: 40rpx;
+    color: #007AFF;
+    background-color: #FFFFFF;
+    border: 2rpx solid black;
+    margin: 0 auto;
+}
+/* descript部分 */
+.descript{
+    font-size:28rpx;
+    text-align: center;
+    margin-top: 6vh;
+}
+.descript-title{
+    padding-bottom:20rpx;
+    font-size: 40rpx;
+    font-weight: 700;
+}
+.btn{
+    margin-top: 6vh;
+    background-color:2cc793;
+    width: 80vw;
+}
+/* 协议部分 */
+.agreement{
+    margin-top: 4vh;
+    text-align: center;
+}

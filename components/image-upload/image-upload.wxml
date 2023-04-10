@@ -1,0 +1,9 @@
+<view class='load-img'>
+    <view class='load-box'>
+      <view class='img-item' wx:for="{{fileList}}" wx:key="index" >
+        <image src="{{item}}" data-src="{{item}}" mode="aspectFill" data-list="{{fileList}}" bindtap=""></image>
+        <icon class='icon' type="clear" size="20" color='#EF4444' catchtap='_onDelTab' data-idx="{{index}}" wx:if="{{!prevent}}"/>
+      </view>
+      <image class='img-add' bindtap='_addImg' wx:if="{{isShow}}"></image>
+    </view>
+</view>

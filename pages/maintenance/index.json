@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "image-upload":"/components/image-upload/image-upload"
+    },
+    "navigationBarBackgroundColor": "#2cc793",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "设备维修",
+    "backgroundTextStyle": "light"
+}

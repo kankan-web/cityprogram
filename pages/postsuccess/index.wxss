@@ -1,0 +1,15 @@
+.container{
+    width: 100%;
+}
+.image-wrap{
+    width: 80%;
+    margin:0 auto;
+    height: 600rpx;
+    background-color: #baf;
+}
+.prompt{
+    font-size: 40rpx;
+    color: #2cc793;
+    font-weight: 700;
+    margin-top: 30rpx;
+}

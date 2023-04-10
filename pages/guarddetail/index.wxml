@@ -1,0 +1,60 @@
+<view class="content">
+    <view class="device-info">
+        <view class="content-item">
+            <text class="title">维修编号</text>
+            <input class="input" name="complainName" value="{{messageDetail.taskCode}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备名称</text>
+            <input class="input" name="complainTel" value="{{messageDetail.deviceName}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备位置</text>
+            <input class="input" name="complainTel" value="{{messageDetail.adeviceAddress}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">创建时间</text>
+            <input class="input" name="complainTel" value="{{messageDetail.createTime}}" disabled='true' />
+        </view>
+        <view wx:if="{{messageDetail.finishTime}}">
+            <view class="line"></view>
+            <view class="content-item">
+                <text class="title">完成时间</text>
+                <input class="input" name="complainTel" value="{{messageDetail.finishTime}}" disabled='true' />
+            </view>
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">维修状态</text>
+            <input class="input" name="complainTel" value="{{messageDetail.progress}}" disabled='true' />
+        </view>
+    </view>
+    <view class="complaint-detail">
+        <form-title title="投诉详情" />
+        <view class="prompt-img" wx:if="{{!messageDetail.repairDetailTestBringImgs.test}}">
+            <image src="../../assets/image/提示图3.png" />
+        </view>
+        <view class='detail-main'>
+            <view class="detail-title">{{messageDetail.repairDetailTestBringImgs.test}}</view>
+            <view class="detail-img">
+                <image-show imgList='{{messageDetail.repairDetailTestBringImgs.imsg}}' />
+            </view>
+        </view>
+    </view>
+    <view class="feedback-detail">
+        <form-title title="反馈信息" />
+        <view class="prompt-img" wx:if="{{!messageDetail.repairResultDetailBringImgs.test}}">
+            <image src="../../assets/image/提示图3.png" />
+        </view>
+        <view wx:else class='detail-main'>
+            <view class="detail-title">{{messageDetail.repairResultDetailBringImgs.test}}</view>
+            <view class="detail-img">
+                <image-show imgList='{{messageDetail.repairResultDetailBringImgs.imsg}}' />
+            </view>
+        </view>
+    </view>
+    <button class="btn" wx:if="{{messageDetail.progress=='需反馈'}}" bindtap="enterEvaluation">评价</button>
+</view>

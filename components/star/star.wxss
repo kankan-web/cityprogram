@@ -1,0 +1,17 @@
+
+/* 注意组件的宽度，默认横向撑开整个容器 */
+.star_wrapper{
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.star_wrapper_normal .image{
+  width: 52rpx;
+  height: 50rpx;
+}
+.star_wrapper_large .image{
+  width: 52rpx;
+  height: 50rpx;
+}

@@ -1,0 +1,18 @@
+    <view
+      class="modal-mask"
+      bindtap="hideModal"
+      catchtouchmove="preventTouchMove"
+      wx:if="{{isshow}}"
+    ></view>
+    <view class="modal-dialog" wx:if="{{isshow}}">
+      <view class="modal-title">客服电话：134-5785-9456</view>
+      <view class="modal-footer">
+        <view
+          class="btn-confirms"
+          bindtap="onCopy"
+          data-status="success"
+          data-name="{{name}}"
+        >复制
+        </view>
+      </view>
+    </view>

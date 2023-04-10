@@ -1,0 +1,22 @@
+<view class="content">
+    <view class="header">
+        <view class="type">{{detail.type}}</view>
+        <view class="title">{{detail.title}}</view>
+        <view class="time">{{detail.updateTime}}</view>
+    </view>
+    <view class="line"></view>
+    <view class="article">
+        <view class="article-img">
+            <image wx:if="{{detail.imgs.length!=0}}"src="{{detail.imgs[0]}}"/>
+            <image wx:else src="{{image}}" mode="aspectFill"/>
+        </view>
+        <view class="article-text" wx:for="{{detail.content}}" wx:key="*this">
+            <view wx:if="{{index==0}}">
+                <view class="space"></view>{{item}}
+            </view>
+            <view wx:else>
+                {{item}}
+            </view>
+        </view>
+    </view>
+</view>

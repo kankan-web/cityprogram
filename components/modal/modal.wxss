@@ -1,0 +1,53 @@
+    /**index.wxss**/
+    /* .show-btn {
+        margin-top: 100rpx;
+        color: #22cc22;
+    } */
+    .modal-mask {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: 0.5;
+        overflow: hidden;
+        z-index: 9000;
+        color: #fff;
+    }
+
+    .modal-dialog {
+        width: 540rpx;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        z-index: 9999;
+        background: #f9f9f9;
+        margin: -180rpx 105rpx;
+        border-radius: 8px;
+    }
+
+    .modal-title {
+        padding-top: 30rpx;
+        padding-bottom: 30rpx;
+        font-size: 36rpx;
+        color: #030303;
+        text-align: center;
+    }
+
+    .modal-footer {
+        display: flex;
+        flex-direction: row;
+        height: 86rpx;
+        border-top: 1px solid #dedede;
+        font-size: 34rpx;
+        line-height: 86rpx;
+    }
+
+    .btn-confirms {
+        width: 100%;
+        background-color: #2cc793;
+        color: white;
+        text-align: center;
+    }

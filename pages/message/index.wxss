@@ -1,0 +1,34 @@
+/* pages/appeal/index.wxss */
+.content{
+    width: 100%;
+    background-color: #fff;
+}
+/* swiper */
+.swiper-warp{
+  width: 95%;
+  height:990rpx;
+  margin:20rpx auto;
+  background-color:#f6f6f6;
+}
+.swiper-main{
+  height: 100%;
+}
+/* 提示为空设置 */
+.image-warp{
+    width: 500rpx;
+    height: 500rpx;
+}
+.empty-data{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+/* 提示信息 */
+.prompt{
+    color: #302e2ea2;
+    font-size: 30rpx;
+    margin-top: 100rpx;
+    text-align: center;
+}

@@ -1,0 +1,72 @@
+<!--用户报修页面-->
+<view class="content">
+    <form bindsubmit="uploadFormData">
+        <view class="device-info">
+            <view class="content-item">
+                <picker bindchange="bindPickerChangeId" value="{{index}}" range="{{arrayId}}">
+                    <view class="picker clear">
+                        <text class="title">设备编号</text>
+                        <view class="pickname" wx:if="{{showPick}}">
+                            {{arrayId[index]}}
+                        </view>
+                        <view class="pickname" wx:else>
+                            请选择
+                        </view>
+                    </view>
+                </picker>
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <picker bindchange="bindPickerChangeName" value="{{index}}" range="{{arrayName}}">
+                    <view class="picker clear">
+                        <text class="title">设备名称</text>
+                        <view class="pickname" wx:if="{{showPick}}">
+                            {{arrayName[index]}}
+                        </view>
+                        <view class="pickname" wx:else>
+                            请选择
+                        </view>
+                    </view>
+                </picker>
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <picker bindchange="bindPickerChangeAddress" value="{{index}}" range="{{arrayAddress}}">
+                    <view class="picker clear">
+                        <text class="title">设备位置</text>
+                        <view class="pickname" wx:if="{{showPick}}">
+                            {{arrayAddress[index]}}
+                        </view>
+                        <view class="pickname" wx:else>
+                            请选择
+                        </view>
+                    </view>
+                </picker>
+            </view>
+        </view>
+        <view class="description">
+            <view class="content-item clear">
+                <text class="title">维修详情</text>
+                <view class="input">
+                    <textarea class="desc-input" name="maintenanceDetail" value="{{maintenanceDetail}}" placeholder="请详细维修情况" />
+                </view>
+            </view>
+            <view class="line"></view>
+            <view class="content-item clear">
+                <text class="title">照片</text>
+                <view class="input">
+                    <view name="complainImg">
+                        <image-upload bind:imageChange="getImageData"></image-upload>
+                    </view>
+                    <view class="warn">
+                        *请提供现场远、近清晰的照片各一张（最多9张）
+                    </view>
+                    <view class="prompt">
+                        支持9张
+                    </view>
+                </view>
+            </view>
+        </view>
+        <button class="btn" form-type="submit">上报</button>
+    </form>
+</view>

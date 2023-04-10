@@ -1,66 +1,69 @@
 // pages/mine/index.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+      islogin:false,
+      info:{
+          name:'未填写',
+          phone:'未填写'
+      },
+      personInfo:{
+        name:'请登陆',
+        src:"/assets/icon/用户-圆.png"
+      },
+      isrepair:false,
+      isLogin:false
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad(options) {
-
+      const type =wx.getStorageSync('type')
+      const isLogin = wx.getStorageSync('isLogin')
+      if(isLogin){//表示用户已经进行了登陆
+        this.haveDataLogin()
+        this.setData({
+            isLogin:true
+        })
+      }
+      if(type==2) this.setData({isrepair:true});
+      if(this.data.isLogin){
+        this.haveDataLogin()
+      }
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
+    // 控制路由跳转
+    handleNavTo(e){
+        const src = e.currentTarget.dataset.src;
+        console.log('点击了',e.currentTarget.dataset.src)
+        if(src=='repairmessage'){
+            wx.navigateTo({
+              url: '/pages/repairmessage/index',
+            })
+        }else if(src=='message'){
+            wx.redirectTo({
+              url: '/pages/message/index',
+            })
+        }else{
+            wx.showToast({
+              title: '功能待开发',
+              icon:'none',
+              duration:1000
+            })
+        }
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    //获取登陆信息
+    haveDataLogin(){
+        const userId=wx.getStorageSync('userId');
+        const phone = wx.getStorageSync('phone');
+        const name = wx.getStorageSync('name');
+        const obj={
+            userId,
+            phone,
+            name
+        }
+        const info={
+            phone,
+            name
+        }
+        this.setData({
+            personInfo:obj,
+            info:info
+        })
     }
 })

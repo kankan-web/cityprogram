@@ -1,31 +1,28 @@
-<view class="content" bindtap="onBtnClick" data-num="{{info.serialNum}}">
+<view class="content" bindtap="onBtnClick" data-num="{{messageItem.serialNum}}">
     <view class="header">
-      <text>诉求编号：{{info.serialNum}}</text>
-      <text>待审核  ></text>
+      <text>{{titleName}}编号：{{messageItem.taskCode}}</text>
+      <text>详情  ></text>
     </view>
     <view class="line"></view>
     <view class="main">
       <view class="clear">
         <view class="name">
-            市政亲民小程序
+            {{messageItem.deviceName}}
         </view>
-        <view class="mark {{info.statu==='需审核'?'warn':'primary'}} clear">{{info.type}}</view>
+        <view class="mark {{messageItem.progress}} clear">报修</view>
       </view>
       <view class="address">
         <view class="address-icon">
             <image src="/assets/image/收货地址.png"></image>
         </view>
-        {{info.address}}
+        {{messageItem.adeviceAddress}}
       </view>
       <view class="time">
         <view class="time-icon">
             <image src="/assets/image/时间.png"></image>
         </view>
-        <view class="time-year">
-           {{info.date}}
-        </view>
         <view class="time-time">
-           {{info.time}}
+           {{messageItem.createTime}}
         </view>
       </view>
     </view>

@@ -1,9 +1,9 @@
 {
     "usingComponents": {
-        "input-item":"/components/input-item/input-item"
+        "image-upload":"/components/image-upload/image-upload"
     },
-    "navigationBarBackgroundColor": "#6886ce",
+    "navigationBarBackgroundColor": "#2cc793",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "设施报修",
+    "navigationBarTitleText": "报修",
     "backgroundTextStyle": "light"
 }

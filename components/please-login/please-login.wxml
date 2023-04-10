@@ -1,7 +1,11 @@
 <!--components/please-login/please-login.wxml-->
 <view class="content">
-    <view class="img">
-        <image src="{{src}}"></image>
-    </view>
-    <view class="text">{{name}}</view>
+        <view class="img" bindtap="handleLogin" data-islogin="{{isLogin}}">
+            <image src="{{loginInfo.src}}"></image>
+        </view>
+        <view class="text" bindtap="handleLogin" data-isLogin="{{isLogin}}">
+            {{loginInfo.name}}
+            <view class="welcome" wx:if="{{isLogin}}">欢迎您，登录智慧物业小程序</view>
+        </view>
+
 </view>

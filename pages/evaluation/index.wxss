@@ -1,0 +1,109 @@
+/* pages/evaluatoion/index.wxss */
+/* pages/repair2/index.wxss */
+/* pages/complaint/index.wxss */
+.content{
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 10rpx 0;
+}
+/* person部分 */
+
+.device-info,.description{
+    width:88%;
+    margin: 30rpx auto;
+    padding: 10rpx 10rpx;
+    color: #333;
+    box-shadow: 0 0 10px 0#cccccc;
+    border-radius: 16rpx;
+    background-color:white;
+}
+.description{
+    margin-top: 50rpx;
+}
+/* line部分 */
+.line{
+    width:94%;
+    height: 2rpx;
+    margin: 0 auto;
+    background-color: #f1f1ff;
+}
+/* evaluation部分 */
+.evaluation{
+    width: 88%;
+    margin: 30rpx auto;
+    padding: 10rpx 10rpx;
+    color: #333;
+    box-shadow: 0 0 10px 0 #cccccc;
+    border-radius: 16rpx;
+    background-color: white;
+}
+.star-container{
+    margin-left: 160rpx;
+    width:70%;
+}
+/* warn部分 */
+.warn{
+    margin-top: 28rpx;
+    color: #fc202d;
+    font-size: 20rpx;
+}
+.prompt{
+    position: absolute;
+    top: 70rpx;
+    left: 20rpx;
+    font-size: 16rpx;
+}
+/* btn部分 */
+.btn{
+    color: white;
+    margin-top: 60rpx;
+    margin-bottom: 50rpx;
+    background-color: #2cc793;
+    width: 80%;
+    border-radius: 98rpx;
+}
+
+
+/* desc */
+.desc-input{
+    width:98%;
+    background-color: #f2f2f4;
+    padding:8rpx;
+    font-size: 28rpx;
+    position: relative;
+}
+/* title部分 */
+.title{
+    width:120rpx;
+    float: left;
+    margin-right:0rpx;
+    font-size: 30rpx;
+}
+.content-item{
+    padding: 20rpx;
+    color: #686868;
+    position: relative;
+    background-color: #fff;
+}
+.content-item input{
+    width: 75%;
+    padding-left: 20rpx;
+    margin-left:30rpx;
+}
+.input{
+    float: right;
+    width: 75%;
+    margin-left:30rpx;
+}
+/* .words{
+    float: left;
+    width: 75%;
+} */
+/* 清除浮动 */
+/* .clear::after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+} */

@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "form-title":"/components/form-title/form-title"
+    },
+    "navigationBarBackgroundColor": "#2cc793",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText":"维修",
+    "backgroundTextStyle": "light"
+}

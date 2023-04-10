@@ -1,67 +1,61 @@
-/* pages/detail/index.wxss */
 .content{
     width: 100%;
-    background-color: #f7f7f7;
-    padding: 10rpx 0rpx 20rpx 0;
+    padding: 10rpx 0;
 }
-/* info部分 */
-.info,.detail,.feedback{
-    width: 95%;
-    background-color: white;
-    margin: 20rpx auto;
+/* device */
+.device-info,.complaint-detail,.feedback-detail{
+    width:88%;
+    margin: 30rpx auto;
+    padding: 10rpx 10rpx;
+    color: #333;
+    box-shadow: 0 0 10px 0#cccccc;
+    border-radius: 16rpx;
+    background-color:white;
 }
-/* 按钮颜色 */
-.warn{
-    background-color:#f5324d;
+.content-item{
+    padding: 20rpx;
+    color: #686868;
+    position: relative;
+    background-color: #fff;
 }
-.primary{
-    background-color: #78ce68;
+.content-item input{
+    width: 60%;
+    padding-left: 50rpx;
+    margin-left:30rpx;
 }
-.mark{
-    width:120rpx;
-    height: 44rpx;
-    text-align: center;
-    line-height: 44rpx;
-    border-radius:30rpx;
-    color: white;
+/* .input{
     float: right;
+    width: 75%;
+    margin-left:30rpx;
+} */
+.title{
+    width: 120rpx;
+    float: left;
+    margin-right:0rpx;
+    font-size: 30rpx;
 }
-/* line部分 */
+/* line */
 .line{
     width:94%;
     height: 2rpx;
     margin: 0 auto;
-    background-color: rgba(138, 136, 136,0.3);
+    background-color: #f1f1ff;
 }
-/* btn部分 */
+/* 投诉详情 */
+.prompt-img{
+    width:300rpx;
+    height: 300rpx;
+    margin: 0 auto;
+}
+.detail-title{
+    padding:10rpx 20rpx;
+}
+/* btn */
 .btn{
     color: white;
-    background-color: #6886ce;
+    margin-top: 50rpx;
+    margin-bottom: 60rpx;
+    background-color: #2cc793;
     width: 80%;
     border-radius: 98rpx;
-}
-/* detail部分 */
-.detail-text{
-    padding: 14rpx;
-    font-size: 28rpx;
-}
-.detail-img{
-    width: 100%;
-}
-.detail-img-wrap{
-    width:46%;
-    height: 220rpx;
-    display: inline-block;
-    margin-left: 20rpx;
-}
-image{
-    width: 100%;
-    height: 100%;
-}
-/* desc */
-.desc-input{
-    width:110%;
-    background-color: #f2f2f4;
-    padding:8rpx;
-    font-size: 28rpx;
 }

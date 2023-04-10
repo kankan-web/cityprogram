@@ -2,7 +2,8 @@
     "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "projectname": "cityprogram",
     "setting": {
-        "compileHotReLoad": true
+        "compileHotReLoad": true,
+        "urlCheck": false
     },
     "condition": {
         "miniprogram": {
@@ -15,8 +16,8 @@
                     "scene": null
                 },
                 {
-                    "name": "诉求页面",
-                    "pathName": "pages/appeal/index",
+                    "name": "消息中心",
+                    "pathName": "pages/home/index",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
@@ -32,6 +33,97 @@
                     "name": "详情",
                     "pathName": "pages/detail/index",
                     "query": "id=166599726866550",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "complaint",
+                    "pathName": "pages/complaint/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "repair",
+                    "pathName": "pages/repair/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "inspection",
+                    "pathName": "pages/inspection/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "maintenance",
+                    "pathName": "pages/maintenance/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "news",
+                    "pathName": "pages/news/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "evaluation",
+                    "pathName": "pages/evaluation/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "home",
+                    "pathName": "pages/home/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "login",
+                    "pathName": "pages/login/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "postsuccess",
+                    "pathName": "pages/postsuccess/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "message",
+                    "pathName": "pages/message/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/repairmessage/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/guarddetail/index",
+                    "query": "messageIdnull=undefined",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "login",
+                    "pathName": "pages/login/index",
+                    "query": "",
                     "launchMode": "default",
                     "scene": null
                 }

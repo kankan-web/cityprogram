@@ -1,15 +1,22 @@
 {
     "pages": [
         "pages/home/index",
-        "pages/appeal/index",
+        "pages/message/index",
         "pages/mine/index",
         "pages/repair/index",
-        "pages/complaint/index",
-        "pages/detail/index"
+        "pages/news/index",
+        "pages/detail/index",
+        "pages/maintenance/index",
+        "pages/inspection/index",
+        "pages/evaluation/index",
+        "pages/postsuccess/index",
+        "pages/repairmessage/index",
+        "pages/guarddetail/index",
+        "pages/login/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#6886ce",
+        "navigationBarBackgroundColor": "#2cc793",
         "navigationBarTextStyle": "white"
     },
     "tabBar": {
@@ -21,8 +28,8 @@
                 "selectedIconPath": "assets/icon/首页01.png"
             },
             {
-                "pagePath": "pages/appeal/index",
-                "text": "诉求",
+                "pagePath": "pages/message/index",
+                "text": "消息中心",
                 "iconPath": "assets/icon/投诉02.png",
                 "selectedIconPath": "assets/icon/投诉01.png"
             },
@@ -35,8 +42,16 @@
         ],
         "color": "#afc0e6",
         "selectedColor": "#ffffff",
-        "backgroundColor": "#6886ce"
+        "backgroundColor": "#2cc793"
     },
+    "requiredPrivateInfos": [
+        "getLocation"
+      ],
+      "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置判断"
+        }
+      },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,11 @@
+{
+    "usingComponents": {
+        "tab-bar":"/components/tab-bar/tab-bar",
+        "item-module":"/components/item-module/item-module"
+    },
+    "onReachBottomDistance": 10,
+    "navigationBarBackgroundColor": "#2cc793",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "保安报修中心",
+    "backgroundTextStyle": "light"
+}

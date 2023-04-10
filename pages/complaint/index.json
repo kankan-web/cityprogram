@@ -1,9 +1,0 @@
-{
-    "usingComponents": {
-        "input-item":"/components/input-item/input-item"
-    },
-    "navigationBarBackgroundColor": "#6886ce",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "市政诉求",
-    "backgroundTextStyle": "light"
-}

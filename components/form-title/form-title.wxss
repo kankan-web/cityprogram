@@ -12,7 +12,7 @@
     width: 8rpx;
     height: 40rpx;
     margin-right: 20rpx;
-    background-color: #6886ce;
+    background-color: #2cc793;
 }
 .icon-wrap{
     margin-left: 60%;

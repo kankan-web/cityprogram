@@ -1,0 +1,10 @@
+<!--components/rate/rate.wxml-->
+<view class="rate-container"
+    wx:for="{{innerCountArray}}"
+    wx:key="index"
+    >
+    <view 
+    data-score="{{index}}"
+    bindtap="onSelect"
+    >123</view>
+</view>

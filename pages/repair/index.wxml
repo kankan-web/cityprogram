@@ -1,48 +1,64 @@
+<!--用户报修页面-->
 <view class="content">
-    <view class="person-info">
-        <input-item title="保修人">
-            <input class="weui-input" auto-focus placeholder="请输入"/>
-        </input-item>
-        <view class="line"></view>
-        <input-item title="联系电话">
-            <input class="weui-input" auto-focus placeholder="请输入"/>
-        </input-item>
-    </view>
-    <view class="address-type">
-        <input-item title="设备位置">
-            <view class="address-detail">
-                <input class="address-input" auto-focus placeholder="上海市杨浦区江浦路549号"/>
-                <view class="address-detail-icon">
-                    <image src="/assets/image/收货地址2.png"></image>
+    <form bindsubmit="uploadFormData">
+        <view class="device-info">
+            <view class="content-item">
+                <text class="title"> 设备名称</text>
+                <input name="repairName" value="{{repairName}}" placeholder="请输入" />
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <picker bindchange="bindPickerChange" 
+                value="{{index}}" 
+                range="{{arrayName}}">
+                    <view class="picker clear">
+                        <text class="title">当前选择</text>
+                        <view class="pickname" wx:if="{{showPick}}">
+                            {{array[index].name}}
+                        </view>
+                        <view class="pickname" wx:else>
+                            请选择
+                        </view>
+                    </view>
+                </picker>
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <text class="title">详细位置</text>
+                <input name="repairAddress" value="{{repairTel}}" placeholder="请输入" />
+            </view>
+        </view>
+        <view class="description">
+            <view class="content-item clear">
+                <text class="title">投诉详情</text>
+                <view class="input">
+                    <textarea 
+                    class="desc-input" 
+                    name="repairDetail"
+                    maxlength="200" 
+                    value="{{repairDetail}}" 
+                    placeholder="请详细描述故障设备状况" />
+                </view>
+                <view class="prompt">
+                        限200字
                 </view>
             </view>
-        </input-item>
-        <view class="line"></view>
-        <input-item title="保修类型">
-            <view class="type-detail">
-                <input class="type-input" auto-focus placeholder="请选择保修类型"/>
-                <view class="address-detail-icon">
-                    <image src="/assets/image/右箭头.png"></image>
+            <view class="line"></view>
+            <view class="content-item clear">
+                <text class="title">照片</text>
+                <view class="input">
+                    <view name="repairImg">
+                        <image-upload bind:imageChange="getImageData"></image-upload>
+                    </view>
+                    <view class="warn">
+                        *请提供现场远、近清晰的照片各一张（最多9张）
+                    </view>
+                    <view class="prompt">
+                        支持9张
+                    </view>
                 </view>
             </view>
-        </input-item>
-    </view>
-    <view class="description">
-        <input-item title="故障描述">
-            <textarea class="desc-input" placeholder="请详细描述故障状况" />
-        </input-item>
-        <view class="line"></view>
-        <input-item title="照片">
-            <view class="photo">
-                <image src="/assets/image/add.png"></image>
-            </view>
-            <view class="warn">
-                *请提供现场远、近清晰的照片各一张（最多9张）
-            </view> 
-            <view class="prompt">
-                支持9张
-            </view>  
-        </input-item>
-    </view>
-    <button class="btn">上报</button>
+        </view>
+        <button class="btn" form-type="submit">上报</button>
+    </form>
 </view>

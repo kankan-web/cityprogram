@@ -1,0 +1,51 @@
+<!--保安巡检页面-->
+<view class="content">
+    <view class="scan" bindtap="handleOpenScan">
+        <view class="scan-image">
+            <image src="../../assets/image/扫描1.png"/>
+        </view>
+        <view class="scan-title">
+            扫描设备信息
+        </view>
+    </view>
+    <form bindsubmit="updateFormData">
+        <view class="device-info">
+        <view class="content-item">
+            <text class="title">设备编号</text>
+            <input name="inspectionNum" value="{{info.inspectionId}}" placeholder="请输入" />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备名称</text>
+            <input name="inspectionName" value="{{info.inspectionName}}" placeholder="请输入" />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备位置</text>
+            <input name="inspectionPosition" value="{{info.inspectionPosition}}" placeholder="请输入" />
+        </view>
+    </view>
+        <view class="device-info">
+            <view class="content-item">
+                <text class="title">设备情况</text>
+                <radio-group class="radioGroup" bindchange="radioChange">
+                    <label class='radio' wx:for="{{state}}" wx:key="index">
+                        <radio class="radio" value="{{item.id}}" checked="{{setId==item.id}}"/>
+                        {{item.name}}
+                    </label>
+                </radio-group>
+            </view>
+            <view class="line"></view>
+            <view class="content-item">
+                <text class="title">巡查位置</text>
+                <block wx:if="{{!position.latitude}}">
+                    <view class="get-position1" bindtap="getPosition">获取位置</view>
+                </block>
+                <block wx:else>
+                    <view class="get-position2">已获取得位置</view>
+                </block>
+            </view>
+        </view>
+        <button class="btn" form-type="submit">上报</button>
+    </form>
+</view>

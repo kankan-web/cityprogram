@@ -1,66 +1,91 @@
-// pages/detail/index.js
+import {myRequest,newUrl} from "../../utils/request"
+import {getDetailProgress} from "../../utils/time"
+import {formatImage} from '../../utils/format'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        messageId:0,
+        messageDetail:{},
+        // imgList:['../../assets/image/提示图3.png'],
+        taskCode:'',
+        type:0,//默认为用户
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad(options) {
-
+        let _this=this;
+        const id = options.messageId;
+        const taskCode = options.taskCode;
+        const type = wx.getStorageSync('type')
+        console.log('options',options)
+        _this.setData({
+            messageId:id,
+            taskCode:taskCode,
+            type:type
+        })
+        _this.getMessageDetail(id,taskCode);
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
+    async getMessageDetail(id,taskCode){
+        const type = wx.getStorageSync('type');
+        if(type==0){//获取用户的消息详情
+            const newdetail=await myRequest({
+                url:newUrl.messageDetailUser,
+                data:{
+                    "id":id
+                }
+            })
+            newdetail.progress=getDetailProgress(newdetail.progress);
+            newdetail.taskCode = taskCode;
+            if(newdetail.repairDetailTestBringImgs) {
+                newdetail.repairDetailTestBringImgs.imsg=formatImage(newdetail.repairDetailTestBringImgs.imsg)
+            }
+            if(newdetail.repairResultDetailBringImgs){
+                newdetail.repairResultDetailBringImgs.imsg=formatImage(newdetail.repairResultDetailBringImgs.imsg)
+            }
+            this.setData({
+                messageDetail:newdetail
+            })
+        }else if(type==2){//获取保安的消息详情
+            const newdetail = await myRequest({
+                url:newUrl.messageDetailGuard,
+                data:{
+                    "id":id
+                }
+            })
+            newdetail.progress=getDetailProgress(newdetail.progress)
+            newdetail.taskCode = taskCode;
+            this.setData({
+                messageDetail:newdetail
+            })
+        }else{//获取保安的消息详情
+            const newdetail=await myRequest({
+                url:newUrl.reqairDetailGuard,
+                data:{
+                    "id":id
+                }
+            })
+            newdetail.progress=getDetailProgress(newdetail.progress)
+            newdetail.taskCode = taskCode;
+            this.setData({
+                messageDetail:newdetail
+            })
+        }
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
+    //进入评论页面
+    async enterEvaluation(){
+        const id = this.data.messageId
+        const taskCode = this.data.taskCode
+        wx.navigateTo({
+          url: '/pages/evaluation/index?messageId='+id+'&taskCode='+taskCode,
+        })
     },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+    //进入维修页面
+    async enterMaintenance(){
+        const id = this.data.messageId
+        const taskCode = this.data.taskCode
+        wx.navigateTo({
+          url: '/pages/maintenance/index?maintenanceId='+id,
+        })
     }
 })

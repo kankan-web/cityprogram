@@ -1,0 +1,83 @@
+<view class="content">
+    <!--Nav导航  -->
+    <tab-bar  title="{{title}}" bindtabchange="onTabChange"></tab-bar>
+    <!-- Nav导航下 视图滑块 -->
+   <view class="swiper-warp">
+    <swiper wx:if="{{islogin&&all.length!=0}}" 
+            class="swiper-main" bind:change="changeTab" current="{{index}}">
+      <!-- all -->
+        <swiper-item>
+          <scroll-view 
+                scroll-y="true" 
+                style="height: 980rpx;"
+                bindscrolltolower="bindDownLoad"  
+            >
+                <block wx:if="{{index==0}}" 
+                        wx:for="{{all}}" 
+                        wx:key="id" 
+                        wx:for-index="idy" 
+                        wx:for-item="itemy">
+                <item-module info="{{itemy}}"></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- wait -->
+        <swiper-item>
+          <scroll-view 
+                scroll-y="true" 
+                style="height: 980rpx;"
+                bindscrolltolower="bindDownLoad"  >
+            <block wx:if="{{index==1}}" 
+                    wx:for="{{wait}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                <item-module info="{{itemy}}"></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- feedback -->
+        <swiper-item>
+            <scroll-view 
+                scroll-y="true" 
+                style="height: 980rpx;"
+                bindscrolltolower="bindDownLoad"  >
+            <block wx:if="{{index==2}}" 
+                    wx:for="{{feedback}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                <item-module info="{{itemy}}" ></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- finish -->
+        <swiper-item>
+            <scroll-view 
+                scroll-y="true" 
+                style="height: 980rpx;"
+                bindscrolltolower="bindDownLoad"
+                >
+                <block wx:if="{{index==3}}" 
+                    wx:for="{{finish}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                    <item-module info="{{itemy}}"></item-module>
+                </block>
+            </scroll-view>
+        </swiper-item>
+      <!-- </block> -->
+    </swiper>
+    <view wx:else class="empty-data">
+        <view class="image-warp" wx:if="{{all.length==0&&islogin}}">
+            <view class="prompt">当前的数据为空</view>
+            <image src="../../assets/image/提示图3.png"></image>
+        </view>
+        <view class="image-warp" wx:else>
+            <view class="prompt">需要您授权后信息后才可以继续操作</view>
+            <image src="../../assets/image/提示图3.png"></image>
+        </view>
+    </view>
+   </view>
+</view>

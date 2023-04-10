@@ -1,23 +1,32 @@
-// components/info-show/info-show.js
+import { formatTime } from "../../utils/time"
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-
+        notifyItem:{
+            type:Object,
+            observer:function(newVal){
+                newVal.createTime=formatTime(newVal.createTime)
+                this.setData({
+                    notify:newVal
+                })
+            }
+        }
     },
-
-    /**
-     * 组件的初始数据
-     */
     data: {
-
+        notify:{}
     },
-
-    /**
-     * 组件的方法列表
-     */
     methods: {
-
+        //将公共对应的参数传递给详细页面
+        handleEnterDetail(e){
+            const {id} = e.currentTarget.dataset
+            wx.navigateTo({
+              url: '/pages/news/index?newsId='+id,
+            //   success:function(res){
+            //       res.eventChannel.emit('handleDetailIdTransfer',id)
+            //   }
+            })
+        }
     }
 })

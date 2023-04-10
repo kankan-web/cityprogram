@@ -9,21 +9,14 @@
 .top{
     width: 100%;
     height: 100rpx;
-    background-color: #6886ce;
+    background-color: #2cc793;
 }
-.welcome{
-    color: #ffffff;
-    font-size: 32rpx;
-    position: relative;
-    bottom: 30rpx;
-    left: 150rpx;
-    font-size: 28rpx;
-}
+
 .bkg{
     width: 100%;
-    height: 96rpx;
+    height: 40rpx;
     border-radius:0 0 50% 50% ;  
-    background-color: #6886ce;
+    background-color: #2cc793;
 }
 /* info部分 */
 .info{
@@ -33,39 +26,63 @@
     padding-top: 10rpx;
     box-shadow: 0 0 10px 0 #cccccc;
     color: #333;
+    border-radius: 16rpx;
+}
+.info-edit{
+  width:50rpx;
+  height: 50rpx;
 }
 .info-name,.info-number{
     /* border: 2rpx solid #6886ce; */
-    margin-top: 30rpx;
+    margin:28rpx 0;
     padding-left: 50rpx;
 }
 .detail{
     float: right;
     padding-right: 80rpx;
 }
+.info-line{
+  width: 80%;
+  height: 2rpx;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+}
+.info-name input,.info-number input{
+    width:70%;
+    margin-right: 60rpx;
+    float: right;
+}
 /* service */
 .service{
     width: 74%;
-    height: 80rpx;
-    font-size: 36rpx;
-    line-height: 80rpx;
-    padding:0  20rpx;
+    padding:16rpx 20rpx;
     margin: 50rpx 10% 50rpx 10%;
     box-shadow: 0 0 10px 0 #cccccc;
     color: #333;
+    border-radius: 16rpx;
 }
-.service-icon{
-    float: right;
-    margin-top: 10rpx;
+.service-item{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.service-icon-left,.service-icon-right{
+    margin-top: 14rpx;
     margin-right: 20rpx;
     width: 50rpx;
     height: 50rpx;
+}
+.service-icon-left{
+  float: left;
+}
+.service-icon-right{
+  float: right;
 }
 /* inform */
 .inform{
     width: 80%;
     height: 260rpx;
-    margin: 30rpx auto;
+    margin: 20rpx auto;
 }
 .inform-title{
     font-weight: 600;
@@ -79,4 +96,5 @@
     width: 100%;
     text-align: center;
     font-size: 26rpx;
+    margin-top: -20rpx;
 }

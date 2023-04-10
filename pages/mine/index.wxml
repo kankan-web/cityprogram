@@ -1,36 +1,71 @@
 <view class="content">
     <view class="header">
         <view class="top">
-            <please-login src="/assets/image/谢千2.png" name="ambition"/>
-            <text class="welcome">欢迎您，登录市政亲民</text>
+           <please-login isLogin="{{isLogin}}" loginInfo="{{personInfo}}"/>
         </view>
         <view class="bkg"></view>
     </view>
     <view class="info">
         <form-title title="个人信息">
-            <image src="/assets/image/编写.png"></image>
         </form-title>
         <view class="info-name">
             <text>姓名</text>
-            <text class="detail">ambition</text>
+            <text class="detail">{{info.name}}</text>
         </view>
+        <view class="info-line"></view>
         <view class="info-number">
             <text>手机号</text>
-            <text class="detail">未填写</text>
+            <text class="detail">{{info.phone}}</text>
         </view>
     </view>
     <view class="service">
-        服务热线
-        <view class="service-icon">
-            <image src="/assets/image/电话.png"></image>
+        <view class="service-item" 
+              wx:if="{{isrepair}}"
+              bindtap="handleNavTo"
+              data-src="repairmessage"
+              >
+          <view class="service-icon-left">
+            <image src="/assets/image/报修.png"></image>
+          </view>
+            报修中心
+          <view class="service-icon-right">
+            <image src="/assets/image/右箭头.png"></image>
+          </view>
         </view>
+        <view class="info-line" wx:if="{{isrepair}}"></view>
+        <view class="service-item"
+              bindtap="handleNavTo"
+              data-src='message'>
+          <view class="service-icon-left">
+            <image src="/assets/image/消息 (1).png"></image>
+          </view>
+            消息中心
+            <view class="service-icon-right">
+            <image src="/assets/image/右箭头.png"></image>
+          </view>
+        </view>
+        <view class="info-line"></view>
+        <view class="service-item"
+              bindtap="handleNavTo"
+              data-src=''
+        >
+          <view class="service-icon-left">
+            <image src="/assets/image/帮助.png"></image>
+          </view>
+            帮助中心
+            <view class="service-icon-right">
+            <image src="/assets/image/右箭头.png"></image>
+          </view>
+        </view>
+        
     </view>
+    
     <view class="inform">
         <view class="inform-title">
-            亲爱的市民朋友：
+            亲爱的朋友们：
         </view>
         <view class="inform-main">
-            城市的进步是我们大家共同努力的结果，在市政环境中不管是不违法、还是好的改善建议都可以向我们反馈，我们会根据实际情况给予处理~
+            社区的进步是我们大家共同努力的结果，在社区环境中不管是不违法、还是好的改善建议都可以向我们反馈，我们会根据实际情况给予处理~
         </view>
     </view>
     <view class="technique">

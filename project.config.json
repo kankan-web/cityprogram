@@ -13,7 +13,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "ignoreUploadUnusedFiles": true
+        "ignoreUploadUnusedFiles": false
     },
     "condition": {},
     "editorSetting": {
@@ -25,5 +25,5 @@
         "ignore": [],
         "include": []
     },
-    "appid": "wxe87b877cc6c1b048"
+    "appid": "wx5590505cdc9a0beb"
 }

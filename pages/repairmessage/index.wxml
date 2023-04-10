@@ -1,0 +1,59 @@
+<view class="content">
+    <!--Nav导航  -->
+    <tab-bar  title="{{title}}" bindtabchange="onTabChange"></tab-bar>
+    <!-- Nav导航下 视图滑块 -->
+   <view class="swiper-warp">
+    <swiper class="swiper-main" bind:change="changeTab" current="{{index}}">
+      <!-- all -->
+        <swiper-item>
+          <scroll-view scroll-y="true" style="height: 1060rpx;" bindscrolltolower="bindDownLoad">
+                <block wx:if="{{index==0}}" 
+                        wx:for="{{all}}" 
+                        wx:key="id" 
+                        wx:for-index="idy" 
+                        wx:for-item="itemy">
+                <item-module repair="{{true}}" info="{{itemy}}"></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- wait -->
+        <swiper-item>
+          <scroll-view scroll-y="true" style="height: 1060rpx;" bindscrolltolower="bindDownLoad">
+            <block wx:if="{{index==1}}" 
+                    wx:for="{{wait}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                <item-module repair="{{true}}" info="{{itemy}}"></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- feedback -->
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height: 1060rpx;" bindscrolltolower="bindDownLoad">
+            <block wx:if="{{index==2}}" 
+                    wx:for="{{feedback}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                <item-module repair="{{true}}" info="{{itemy}}" ></item-module>
+            </block>
+          </scroll-view>
+        </swiper-item>
+        <!-- finish -->
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height: 1060rpx;" bindscrolltolower="bindDownLoad">
+                <block wx:if="{{index==3}}" 
+                    wx:for="{{finish}}" 
+                    wx:key="id" 
+                    wx:for-index="idy" 
+                    wx:for-item="itemy">
+                    <item-module repair="{{true}}" info="{{itemy}}"></item-module>
+                </block>
+            </scroll-view>
+        </swiper-item>
+      <!-- </block> -->
+    </swiper>
+   </view>
+  
+</view>

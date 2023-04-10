@@ -1,45 +1,67 @@
 <view class="content">
-    <view class="info">
-        <form-title title="保修信息" >
-            <view class="mark warn clear">报修</view>
-        </form-title>
-        <input-item title="时间" types="compact">
-            <view>2022-10-17  17:01:08</view>
-        </input-item>
+    <view class="device-info">
+        <view class="content-item">
+            <text class="title">维修编号</text>
+            <input class="input" name="complainName" value="{{messageDetail.taskCode}}" disabled='true' />
+        </view>
         <view class="line"></view>
-        <input-item title="地点"  types="compact">
-            <view>思明区厦港街道鸿山社区委员会</view>
-        </input-item>
+        <view class="content-item">
+            <text class="title">设备名称</text>
+            <input class="input" name="complainTel" value="{{messageDetail.deviceName}}" disabled='true' />
+        </view>
         <view class="line"></view>
-        <input-item title="电话"  types="compact">
-            <view>13799161275</view>
-        </input-item>
+        <view class="content-item">
+            <text class="title">设备位置</text>
+            <input class="input" name="complainTel" value="{{messageDetail.adeviceAddress}}" disabled='true' />
+        </view>
         <view class="line"></view>
-        <input-item title="类型"  types="compact">
-            <view>公共设施损害</view>
-        </input-item>
-    </view>
-    <view class="detail">
-        <form-title title="保修详情">
-        </form-title>
-        <view class="detail-info">
-            <view class="detail-text">
-                稀土高新区公用事业管理局邀请市民通过市政小程序积极参与市政设施、园林绿化、环境卫生问题的发现与上报，发现问题及时处理。市政随手拍涉及园林绿化、公园广场、道路破坏、井盖损坏、环卫垃圾、供热燃气、供水、排水等方面的事件，通过市政随手拍小程序的使用，创新公用事业管理模式，不但提升公用事业管理能力和水平，也提高了市民积极参与城市管理与建设热情
+        <view class="content-item">
+            <text class="title">创建时间</text>
+            <input class="input" name="complainTel" value="{{messageDetail.createTime}}" disabled='true' />
+        </view>
+        <view wx:if="{{messageDetail.finishTime}}">
+            <view class="line"></view>
+            <view class="content-item">
+                <text class="title">完成时间</text>
+                <input class="input" name="complainTel" value="{{messageDetail.finishTime}}" disabled='true' />
             </view>
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">维修状态</text>
+            <input class="input" name="complainTel" value="{{messageDetail.progress}}" disabled='true' />
+        </view>
+    </view>
+    <view class="complaint-detail">
+        <form-title title="投诉详情" />
+        <view class="prompt-img" wx:if="{{!messageDetail.repairDetailTestBringImgs.test}}">
+            <image src="../../assets/image/提示图3.png" />
+        </view>
+        <view wx:else class='detail-main'>
+            <view class="detail-title">{{messageDetail.repairDetailTestBringImgs.test}}</view>
             <view class="detail-img">
-                <view class="detail-img-wrap">
-                    <image src="/assets/image/e-1.png"></image>
-                </view>
-                <view class="detail-img-wrap">
-                    <image src="/assets/image/e-1.png"></image>
-                </view>
+                <image-show imgList='{{messageDetail.repairDetailTestBringImgs.imsg}}' />
             </view>
         </view>
     </view>
-    <view class="feedback">
-        <input-item title="反馈" types="compact">
-            <textarea class="desc-input" placeholder="请详细描述故障状况" />
-        </input-item>
+    <view class="feedback-detail">
+        <form-title title="反馈信息" />
+        <view class="prompt-img" wx:if="{{!messageDetail.repairResultDetailBringImgs.test}}">
+            <image src="../../assets/image/提示图3.png" />
+        </view>
+        <view wx:else class='detail-main'>
+            <view class="detail-title">{{messageDetail.repairResultDetailBringImgs.test}}</view>
+            <view class="detail-img">
+                <image-show imgList='{{messageDetail.repairResultDetailBringImgs.imsg}}' />
+            </view>
+        </view>
     </view>
-    <button class="btn">反馈</button>
+    <button class="btn" 
+            wx:if="{{messageDetail.progress=='需反馈'||messageDetail.progress==1}}"
+            bindtap="enterEvaluation"
+            >评价</button>
+    <button class="btn" 
+            wx:if="{{messageDetail.progress=='需处理'&&type==1}}"
+            bindtap="enterMaintenance"
+            >处理</button>
 </view>
