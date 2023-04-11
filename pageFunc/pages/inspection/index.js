@@ -1,4 +1,4 @@
-import {myRequest,newUrl,url} from "../../utils/request"
+import {myRequest,newUrl,url} from "../../../utils/request"
 Page({
     data: {
         position:{//地址
@@ -18,7 +18,6 @@ Page({
     },
     //获取设备状态
     radioChange(e){
-        console.log('radio发生change事件，value值为:',e.detail.value)
         this.setData({
             stateId:e.detail.value
         })
@@ -95,13 +94,13 @@ Page({
             if(stateId==0){
                setTimeout(()=>{
                 wx.redirectTo({
-                    url: '../postsuccess/index?stateId=0',
+                    url:'/pages/postsuccess/index?stateId=0'
                 })
                },0)
             }else{
                 setTimeout(()=>{
                     wx.redirectTo({
-                        url: '../postsuccess/index?stateId=1',
+                        url:'/pages/postsuccess/index?stateId=1'
                     })
                 })
             }
@@ -112,7 +111,6 @@ Page({
         const _this=this
         const {inspectionName,inspectionNum,inspectionPosition}=data;
         const {stateId,position}=_this.data;
-        console.log('检查数据',inspectionName,inspectionNum,inspectionPosition)
         //1.检测设备信息是否为空
         if(!inspectionName||!inspectionNum||!inspectionPosition){
             wx.showToast({

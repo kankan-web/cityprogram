@@ -1,11 +1,6 @@
-import {pickArray,pickArrayName} from '../../utils/data'
-import {myRequest, myRequestPostImg,newUrl} from '../../utils/request'
-import {nowTime} from '../../utils/time'
+import {pickArray,pickArrayName} from '../../../utils/data'
+import {myRequest, myRequestPostImg,newUrl} from '../../../utils/request'
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
         repairName:'',//设备名称
         repairDetail:'',//投诉详情
@@ -31,9 +26,7 @@ Page({
              updateType=1
         }
         const partId = _this.data.array[_this.data.index].id;
-
         flag = this.handleCheckRepair(repairDetail,repairAddress,repairName,showPick)
-        console.log('flag',flag)
         if(flag){
             const result = await myRequest({
                 url:newUrl.uploadRepair,
@@ -51,13 +44,10 @@ Page({
             console.log('result为：',result)
             if(result.code==200){
                 wx.redirectTo({
-                  url: '../postsuccess/index?stateId=1',
+                    url:'/pages/postsuccess/index?stateId=1'
                 })
             }
         }
-    },
-    onLoad(options) {
-    
     },
     bindPickerChange(e){
         this.setData({

@@ -46,19 +46,21 @@ Page({
             this.setData({
                 messageDetail:newdetail
             })
-        }else if(type==2){//获取保安的消息详情
-            const newdetail = await myRequest({
-                url:newUrl.messageDetailGuard,
-                data:{
-                    "id":id
-                }
-            })
-            newdetail.progress=getDetailProgress(newdetail.progress)
-            newdetail.taskCode = taskCode;
-            this.setData({
-                messageDetail:newdetail
-            })
-        }else{//获取保安的消息详情
+        }
+        // else if(type==2){//获取保安的消息详情
+        //     const newdetail = await myRequest({
+        //         url:newUrl.messageDetailGuard,
+        //         data:{
+        //             "id":id
+        //         }
+        //     })
+        //     newdetail.progress=getDetailProgress(newdetail.progress)
+        //     newdetail.taskCode = taskCode;
+        //     this.setData({
+        //         messageDetail:newdetail
+        //     })
+        // }
+        else{//获取保安的消息详情
             const newdetail=await myRequest({
                 url:newUrl.reqairDetailGuard,
                 data:{
@@ -77,15 +79,22 @@ Page({
         const id = this.data.messageId
         const taskCode = this.data.taskCode
         wx.navigateTo({
-          url: '/pages/evaluation/index?messageId='+id+'&taskCode='+taskCode,
+          url: '/pageFunc/pages/evaluation/index?messageId='+id+'&taskCode='+taskCode,
         })
     },
     //进入维修页面
-    async enterMaintenance(){
+    async enterFunction(){
         const id = this.data.messageId
-        const taskCode = this.data.taskCode
-        wx.navigateTo({
-          url: '/pages/maintenance/index?maintenanceId='+id,
-        })
+        const taskCode = this.data.taskCode;
+        const type = this.data.type;
+        if(type==1){
+            wx.navigateTo({
+                url: '/pages/maintenance/index?maintenanceId='+id,
+              })
+        }else if(type==2){
+            wx.navigateTo({
+                url: '/pages/inspection/index?maintenanceId='+id,
+              })
+        }
     }
 })

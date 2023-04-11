@@ -6,7 +6,7 @@ Page({
             name:'全部',
         },{
             titleId:1,
-            name:'需受理',
+            name:'需处理',
         },{
             titleId:3,
             name:'已完结',
@@ -118,7 +118,6 @@ Page({
     //获取finish中的列表 用户、保安、维修
     async getFinishMessageList(currentPage){
         let _this=this;
-        
         const info =await this.getdetail(2,currentPage)
         _this.setData({
             finish:[..._this.data.finish,...info],
@@ -126,7 +125,6 @@ Page({
         })
     },
     async getdetail(progress,currentPage){
-        console.log('发送一次列表请求')
         const type = wx.getStorageSync('type');
         const id = wx.getStorageSync('userId');
         const pigeSize = 4; 

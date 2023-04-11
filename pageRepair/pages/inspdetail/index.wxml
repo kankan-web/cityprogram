@@ -1,0 +1,33 @@
+<view class="content">
+    <view class="device-info">
+        <view class="content-item">
+            <text class="title">维修编号</text>
+            <input class="input" name="complainName" value="{{messageDetail.taskCode}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备名称</text>
+            <input class="input" name="complainTel" value="{{messageDetail.deviceName}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">设备位置</text>
+            <input class="input" name="complainTel" value="{{messageDetail.bname+' '+' '+messageDetail.area}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">签到时间</text>
+            <input class="input" name="complainTel" value="{{messageDetail.signDate||'请先去巡检'}}" disabled='true' />
+        </view>
+        <view class="line"></view>
+        <view class="content-item">
+            <text class="title">巡检状态</text>
+            <input wx:if="{{messageDetail.progress=='wait'}}" class="input" name="complainTel" value="需处理" disabled='true' />
+            <input wx:else class="input" name="complainTel" value="已完成" disabled='true' />
+        </view>
+    </view>
+    <button class="btn" 
+            wx:if="{{messageDetail.progress=='wait'}}"
+            bindtap="enterFunction"
+            >处理</button>
+</view>

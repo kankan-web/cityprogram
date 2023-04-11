@@ -2,7 +2,7 @@
 <view class="content">
     <view class="scan" bindtap="handleOpenScan">
         <view class="scan-image">
-            <image src="../../assets/image/扫描1.png"/>
+            <image src="../../../assets/image/扫描1.png"/>
         </view>
         <view class="scan-title">
             扫描设备信息

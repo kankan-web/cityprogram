@@ -19,19 +19,26 @@ Page({
         if(stateId==2){//去页面
             setTimeout(function(){
                 wx.redirectTo({
-                    url: '../home/index',
+                    url: '/pages/home/index',
                   })
                },2000)
         }else if(stateId==1){//去message页面
             setTimeout(function(){
                 wx.redirectTo({
-                    url: '../message/index',
+                    url: '/pages/message/index',
                   })
                },2000)
+        }else if(stateId==3){
+            setTimeout(function(){
+                wx.redirectTo({
+                //   url: '../repairmessage/index',
+                url:'/pageRepair/pages/repairmessage/index'
+                })
+            },2000)
         }else{//去维修页面
             setTimeout(function(){
                 wx.redirectTo({
-                    url: '../repair/index',
+                    url: '/pageFunc/pages/repair',
                   })
                },2000)
         }

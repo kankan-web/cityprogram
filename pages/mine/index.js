@@ -33,7 +33,7 @@ Page({
         console.log('点击了',e.currentTarget.dataset.src)
         if(src=='repairmessage'){
             wx.navigateTo({
-              url: '/pages/repairmessage/index',
+              url: '/pageRepair/pages/repairmessage/index',
             })
         }else if(src=='message'){
             wx.redirectTo({

@@ -4,7 +4,7 @@
         <view class="device-info">
             <view class="content-item">
                 <text class="title">设备编号</text>
-                <input name="complainName" value="{{taskCode}}" placeholder="" />
+                <input name="complainName" value="{{messageDetail.taskCode}}" placeholder="" />
             </view>
             <view class="line"></view>
             <view class="content-item">

@@ -35,7 +35,7 @@
     <view class="complaint-detail">
         <form-title title="投诉详情" />
         <view class="prompt-img" wx:if="{{!messageDetail.repairDetailTestBringImgs.test}}">
-            <image src="../../assets/image/提示图3.png" />
+            <image src="../../../assets/image/提示图3.png" />
         </view>
         <view class='detail-main'>
             <view class="detail-title">{{messageDetail.repairDetailTestBringImgs.test}}</view>
@@ -47,7 +47,7 @@
     <view class="feedback-detail">
         <form-title title="反馈信息" />
         <view class="prompt-img" wx:if="{{!messageDetail.repairResultDetailBringImgs.test}}">
-            <image src="../../assets/image/提示图3.png" />
+            <image src="../../../assets/image/提示图3.png" />
         </view>
         <view wx:else class='detail-main'>
             <view class="detail-title">{{messageDetail.repairResultDetailBringImgs.test}}</view>

@@ -1,4 +1,4 @@
-import {myRequest,newUrl} from "../../utils/request"
+import {myRequest,newUrl} from "../../../utils/request"
 Page({
 
     data: {
@@ -9,10 +9,6 @@ Page({
         // detail:'',
         taskCode:''//前端展示编号
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad(options) {
         console.log('option为',options)
         let _this=this;
@@ -25,8 +21,11 @@ Page({
         _this.getMessageDetail(id)
     },
     async getMessageDetail(id){
+        let url=newUrl.messageDetailUser;
+        const type = wx.getStorageSync('type');
+        if(type==0) url=newUrl.reqairDetailGuard;
         const newdetail=await myRequest({
-            url:newUrl.messageDetailUser,
+            url:url,
             data:{
                 "id":id
             }
@@ -64,10 +63,6 @@ Page({
         })
         flag=this.checkDateBeforeUpload(detail,starArr)
         if(flag){
-            console.log('updateType',updateId)
-            console.log('taskId',id)
-            console.log('resultText',detail)
-            console.log('pingJia',starArr)
             const result = await myRequest({
                 url:newUrl.commentUrl,
                 method:"POST",
@@ -78,9 +73,13 @@ Page({
                     pingJia:starArr
                 }
             })
-            if(result.code==200){
+            if(result.code==200&&type==2){
                 wx.redirectTo({
-                    url: '/pages/postsuccess/index?stateId=2',
+                    url:'/pages/postsuccess/index?stateId=3'
+                  })
+            }else{
+                wx.redirectTo({
+                    url:'/pages/postsuccess/index?stateId=2'
                   })
             }
         }

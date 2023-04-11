@@ -16,7 +16,7 @@ Page({
         funcmodel1:[{
             name:'用户报修',
             desc:'公共设施一键报修',
-            src:'/pages/repair/index',
+            src:'/pageFunc/pages/repair/index',
             img:'/assets/image/维修记录.png'
         },{
             name:'消息中心',
@@ -58,7 +58,7 @@ Page({
                 isLogin:true
             })
         }
-        this.login()
+        // this.login()
     },
   //控制功能模块页面跳转
   handleFuncNav(e){
@@ -131,11 +131,11 @@ Page({
       })
   },
 //   //登陆代码设置
-  login(){
-      wx.login({
-        success: (res) => {
-          console.log('res',res)
-        },
-      })
-  }
+//   login(){
+//       wx.login({
+//         success: (res) => {
+//         //   console.log('res',res)
+//         },
+//       })
+//   }
 })

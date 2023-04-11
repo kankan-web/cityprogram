@@ -30,12 +30,12 @@ export const info=[{
 export const funcmodel2=[{
     name:'保安巡检',
     desc:'公共设施一键报修',
-    src:'/pages/inspection/index',
+    src:'/pageFunc/pages/inspection/index',
     img:'/assets/image/扫描1.png'
 },{
     name:'设备报修',
     desc:'',
-    src:'/pages/repair/index',
+    src:'/pageFunc/pages/repair/index',
     img:'/assets/image/维修记录.png',
 },{
     name:'联系客服',
@@ -46,7 +46,7 @@ export const funcmodel2=[{
 export const funcmodel3=[{
     name:'设备维修',
     desc:'公共设施一键报修',
-    src:'/pages/maintenance/index',
+    src:'/pageFunc/pages/maintenance/index',
     img:'/assets/image/维修记录.png'
 },{
     name:'消息中心',

@@ -62,6 +62,6 @@
             >评价</button>
     <button class="btn" 
             wx:if="{{messageDetail.progress=='需处理'&&type==1}}"
-            bindtap="enterMaintenance"
+            bindtap="enterFunction"
             >处理</button>
 </view>

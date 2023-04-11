@@ -1,6 +1,5 @@
-import { myRequest, newUrl } from "../../utils/request"
-import {SeparatedData} from '../../utils/data'
-// pages/maintenance/index.js
+import { myRequest, newUrl } from "../../../utils/request"
+import {SeparatedData} from '../../../utils/data'
 Page({
     data: {
         index:-1,//数组
@@ -17,7 +16,6 @@ Page({
         this.setData({
             maintenanceId
         })
-        //初始化接单列表
        this.getMaintenanceList();
     },
     bindPickerChangeId(e){
@@ -69,7 +67,6 @@ Page({
         const maintenanceId = arrayId[index];
         const {maintenanceDetail} = e.detail.value;
         flag = _this.handleCheckInfo(index,maintenanceDetail);
-        console.log('flag为',flag)
         if(flag){
             const res = await myRequest({
                 url:newUrl.uploadFinishRepair,
@@ -85,7 +82,7 @@ Page({
             console.log('res',res)
             if(res.code==200){
                 wx.redirectTo({
-                  url: '../postsuccess/index?stateId=2',
+                    url:'/pages/postsuccess/index?stateId=2'
                 })
             }
         }

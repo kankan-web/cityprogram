@@ -1,5 +1,4 @@
-import {myRequest,newUrl} from '../../utils/request'
-import {generateRandomIds} from '../../utils/time'
+import {myRequest,newUrl} from '../../../utils/request'
 Page({
     data: {
         title:[{
@@ -32,7 +31,6 @@ Page({
     },
     onTabChange(event){
         let index = event.detail;
-        // if(this.data.title.length==3&&index==2) index=3;
         this.setData({index})
     },
     changeTab(e){
@@ -70,7 +68,6 @@ Page({
     async getWaitMessageList(currentPage){
         let _this=this;
         const info =await this.getdetail(0,currentPage)
-        console.log('需处理',info)
         _this.setData({
             wait:[..._this.data.wait,...info],
             pageWait:currentPage+1

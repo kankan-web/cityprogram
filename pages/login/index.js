@@ -8,20 +8,9 @@ Page({
         isAgree:false,
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad(options) {
 
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
     /**
      * 生命周期函数--监听页面显示
      */
@@ -42,5 +31,50 @@ Page({
                 isAgree:false
             })
         }
-    }
+    },
+    handleLogin(){
+        wx.login({
+          success: (res) => {
+            const code = res.code;
+            wx.request({
+              url: 'url',
+              success:(res)=>{
+                  console(result.data.openId);//获取到openid
+              },
+              fail:(err)=>{
+                  console.log('err')
+              }
+            })
+          },
+        })
+    },
+
+    getPhoneNumber (e) {
+        console.log(e.detail.code)
+        console.log(e.detail.errMsg)
+        console.log(e.detail.iv)
+        wx.login({
+            success:res =>{
+                console.log(res.code);
+                wx.request({
+                    url:'服务器后端接口',
+                    data:{
+                       'encryptedData':e.detail.encryptedData,
+                       'iv':e.detail.iv,
+                       'codes':e.detail.code
+                    },
+                    method:'GET',
+                    header:{
+                        'content-type':'application/json'
+                    },
+                    success:function(res){
+                        wx.setStorageSync('PhoneNumber',res.data.phoneNumber);
+                        console.log("手机号为" + res.data.phoneNumber)
+                    },
+                    fail:function(err){
+                        console.log(err);
+                    }
+                })
+        }})
+      }
 })

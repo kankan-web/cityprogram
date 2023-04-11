@@ -32,4 +32,15 @@
             两秒后自动跳转到首页
         </view>
     </block>
+    <block wx:elif="{{stateId=='3'}}">
+        <view class="image-wrap">
+            <image src="../../assets/image/成功的引导.png" mode="" />
+        </view>
+        <view class="prompt">
+            评价成功
+        </view>
+        <view class="prompt">
+            两秒后自动跳转到维修列表
+        </view>
+    </block>
 </view>

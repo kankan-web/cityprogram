@@ -1,4 +1,4 @@
-import { formatProgress,generateRandomIds} from '../../utils/data'
+import { formatProgress} from '../../utils/data'
 // components/item-module/item-module.js
 Component({
     properties: {
@@ -7,7 +7,6 @@ Component({
             observer:function(newVal){
                 const type = wx.getStorageSync('type')
                 newVal.progress = formatProgress(newVal.progress)
-                if(!newVal.taskCode) newVal.taskCode = generateRandomIds(type,newVal.id)
                 this.setData({
                     messageItem:newVal
                 })
@@ -36,16 +35,18 @@ Component({
     },
     methods: {
         onBtnClick(event){
-            const {id,taskCode}=this.data.messageItem;
+            const {id,taskCode,deviceName,progress}=this.data.messageItem;
             const repair=this.data.repair
             const type = wx.getStorageSync('type');
             let src='';
             if(type==0){
                src = '/pages/detail/index?messageId='+id+'&taskCode='+taskCode;
             }else if(type==2&&repair){
-              src='/pages/guarddetail/index?messageId='+id+'&taskCode='+taskCode;
+              src='/pageRepair/pages/guarddetail/index?messageId='+id+'&taskCode='+taskCode
+            }else if(type==2&&!repair){
+               src = '/pageRepair/pages/inspdetail/index?messageId='+id+'&taskCode='+taskCode+'&deviceName='+deviceName+'&progress='+progress;
             }else{
-               src = '/pages/detail/index?messageId='+id+'&taskCode='+taskCode;
+                src = '/pages/detail/index?messageId='+id+'&taskCode='+taskCode;
             }
             //将参数传递给详细页面
             wx.navigateTo({

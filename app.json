@@ -3,16 +3,28 @@
         "pages/home/index",
         "pages/message/index",
         "pages/mine/index",
-        "pages/repair/index",
         "pages/news/index",
         "pages/detail/index",
-        "pages/maintenance/index",
-        "pages/inspection/index",
-        "pages/evaluation/index",
         "pages/postsuccess/index",
-        "pages/repairmessage/index",
-        "pages/guarddetail/index",
         "pages/login/index"
+    ],
+    "subPackages": [
+        {
+            "root": "pageRepair",
+            "pages": [
+                "pages/repairmessage/index",
+                "pages/guarddetail/index",
+                "pages/inspdetail/index"
+            ]
+        },{
+            "root": "pageFunc",
+            "pages": [
+                "pages/repair/index",
+                "pages/maintenance/index",
+                "pages/inspection/index",
+                "pages/evaluation/index"
+            ]
+        }
     ],
     "window": {
         "backgroundTextStyle": "light",

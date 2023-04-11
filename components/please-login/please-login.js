@@ -22,7 +22,7 @@ Component({
         },
         async login(){
             let _this=this
-            const type =2;//登陆类别0-用户,1-维修,2-保安
+            const type =0;//登陆类别0-用户,1-维修,2-保安
             let obj={};//用于存储登陆信息
             const newPersonInfo=await myRequestPost({
                 url:newUrl.login,

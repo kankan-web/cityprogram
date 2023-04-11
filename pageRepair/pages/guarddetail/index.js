@@ -1,6 +1,6 @@
-import {myRequest,newUrl} from "../../utils/request"
-import {getDetailProgress} from "../../utils/time"
-import {formatImage} from '../../utils/format'
+import {myRequest,newUrl} from "../../../utils/request"
+import {getDetailProgress} from "../../../utils/time"
+import {formatImage} from '../../../utils/format'
 Page({
     data: {
         messageDetail:{
@@ -41,7 +41,7 @@ Page({
     enterEvaluation(){
         const id = this.data.messageId;
         wx.navigateTo({
-          url: '/pages/evaluation/index?messageId='+id,
+        url:'/pageFunc/pages/evaluation/index?messageId='+id
         })
     }
 })
