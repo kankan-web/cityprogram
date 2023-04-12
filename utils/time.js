@@ -21,7 +21,6 @@ export function nowTime(){
     return nowYear+'-'+nowMonth+'-'+nowdates+' '+nowHours+':'+nowMinutes+':'+nowSeconds;
 }
 export function formatContent(detail){
-    console.log(detail)
     let arr=detail.split('\r\n\r\n');
     return arr;
 }

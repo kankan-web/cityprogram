@@ -88,6 +88,9 @@
     height:110rpx;
     background-color: #41b0bf;
     border-radius: 20rpx;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
 }
 .func-help{
     background-color: rgb(243, 138, 126);
@@ -96,13 +99,11 @@
 .func-advice-text,.func-help-text{
     float: left;
     color: white;
-    margin: 30rpx 30rpx;
 }
 .func-help-image,.func-advice-image{
     width: 80rpx;
     height: 80rpx;
     float:right;
-    margin: 14rpx 30rpx;
 }
 /* cooperation部分 */
 .cooperation{

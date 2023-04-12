@@ -41,7 +41,7 @@ export const funcmodel2=[{
     name:'联系客服',
     desc:'',
     src:'',
-    img:'/assets/image/维修记录.png',
+    img:'/assets/image/联系.png',
 }]
 export const funcmodel3=[{
     name:'设备维修',

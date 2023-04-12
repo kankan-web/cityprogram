@@ -8,17 +8,9 @@ Component({
             type:Array,
         }
     },
-
-    /**
-     * 组件的初始数据
-     */
     data: {
         currentTab:0
     },
-
-    /**
-     * 组件的方法列表
-     */
     methods: {
         changeTab(event){
             const {index} = event.currentTarget.dataset
@@ -28,5 +20,4 @@ Component({
             this.triggerEvent("tabchange",index)
         }
     }
-    
 })

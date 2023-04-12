@@ -23,9 +23,6 @@ Component({
             const {id} = e.currentTarget.dataset
             wx.navigateTo({
               url: '/pages/news/index?newsId='+id,
-            //   success:function(res){
-            //       res.eventChannel.emit('handleDetailIdTransfer',id)
-            //   }
             })
         }
     }

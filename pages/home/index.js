@@ -3,13 +3,13 @@ import {funcmodel2,funcmodel3} from '../../utils/data'
 Page({
     data: {
         background:[{
-            src:'/assets/image/banner.png',
+            src:'https://note.youdao.com/yws/api/personal/file/WEB46fad8ee98f19fb4fb4fa837eebf6661?method=download&shareKey=f301f5c2080a6080c4fb87b9f169b822',
             imgId:100
         },{
-            src:'/assets/image/banner.png',
+            src:'https://note.youdao.com/yws/api/personal/file/WEB46fad8ee98f19fb4fb4fa837eebf6661?method=download&shareKey=f301f5c2080a6080c4fb87b9f169b822',
             imgId:101
         },{
-            src:'/assets/image/banner.png',
+            src:'https://note.youdao.com/yws/api/personal/file/WEB46fad8ee98f19fb4fb4fa837eebf6661?method=download&shareKey=f301f5c2080a6080c4fb87b9f169b822',
             imgId:102
         }],
         notify:[],//公告栏列表

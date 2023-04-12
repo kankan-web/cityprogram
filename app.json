@@ -5,8 +5,7 @@
         "pages/mine/index",
         "pages/news/index",
         "pages/detail/index",
-        "pages/postsuccess/index",
-        "pages/login/index"
+        "pages/postsuccess/index"
     ],
     "subPackages": [
         {
@@ -22,7 +21,9 @@
                 "pages/repair/index",
                 "pages/maintenance/index",
                 "pages/inspection/index",
-                "pages/evaluation/index"
+                "pages/evaluation/index",
+                "pages/login/index",
+                "pages/privacy/index"
             ]
         }
     ],
@@ -56,6 +57,7 @@
         "selectedColor": "#ffffff",
         "backgroundColor": "#2cc793"
     },
+    "lazyCodeLoading": "requiredComponents",
     "requiredPrivateInfos": [
         "getLocation"
       ],

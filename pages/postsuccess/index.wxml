@@ -1,7 +1,7 @@
 <view class="container">
     <block wx:if="{{stateId=='1'}}">
         <view class="image-wrap">
-            <image src="../../assets/image/成功的引导.png" mode="" />
+            <image src="https://note.youdao.com/yws/api/personal/file/WEBa94857bebe1f39b7b3498d10df26333a?method=download&shareKey=81ed7ca3ac4d6c7190f3e595f09ee108" mode="" />
         </view>
         <view class="prompt">
             表单提交成功
@@ -12,7 +12,7 @@
     </block>
     <block wx:elif="{{stateId=='0'}}">
         <view class="image-wrap">
-            <image src="../../assets/image/重定向的引导.png" mode="" />
+            <image src="https://note.youdao.com/yws/api/personal/file/WEB01c0eff8f4bf8dc05014c96db3c1a386?method=download&shareKey=9aa01ae99656c119a6c4d9414d5a94c5" mode="" />
         </view>
         <view class="prompt">
             表单提交成功
@@ -23,7 +23,7 @@
     </block>
     <block wx:elif="{{stateId=='2'}}">
         <view class="image-wrap">
-            <image src="../../assets/image/成功的引导.png" mode="" />
+            <image src="https://note.youdao.com/yws/api/personal/file/WEBa94857bebe1f39b7b3498d10df26333a?method=download&shareKey=81ed7ca3ac4d6c7190f3e595f09ee108" mode="" />
         </view>
         <view class="prompt">
             评价成功
@@ -34,7 +34,7 @@
     </block>
     <block wx:elif="{{stateId=='3'}}">
         <view class="image-wrap">
-            <image src="../../assets/image/成功的引导.png" mode="" />
+            <image src="https://note.youdao.com/yws/api/personal/file/WEBa94857bebe1f39b7b3498d10df26333a?method=download&shareKey=81ed7ca3ac4d6c7190f3e595f09ee108" mode="" />
         </view>
         <view class="prompt">
             评价成功

@@ -1,6 +1,5 @@
 {
     "usingComponents": {
-        "bottom-modal":"/components/bottom-modal/bottom-modal"
     },
     "navigationBarBackgroundColor": "#2cc793",
     "navigationBarTextStyle": "white",

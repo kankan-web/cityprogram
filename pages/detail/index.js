@@ -18,7 +18,6 @@ Page({
         const id = options.messageId;
         const taskCode = options.taskCode;
         const type = wx.getStorageSync('type')
-        console.log('options',options)
         _this.setData({
             messageId:id,
             taskCode:taskCode,

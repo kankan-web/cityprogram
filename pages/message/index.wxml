@@ -72,11 +72,11 @@
     <view wx:else class="empty-data">
         <view class="image-warp" wx:if="{{all.length==0&&islogin}}">
             <view class="prompt">当前的数据为空</view>
-            <image src="../../assets/image/提示图3.png"></image>
+            <image src="https://note.youdao.com/yws/api/personal/file/WEBec3ae16898e973a510a5ad5a0d824d28?method=download&shareKey=755b3327cffa51b85070373b8bf1777b"></image>
         </view>
         <view class="image-warp" wx:else>
             <view class="prompt">需要您授权后信息后才可以继续操作</view>
-            <image src="../../assets/image/提示图3.png"></image>
+            <image src="https://note.youdao.com/yws/api/personal/file/WEBec3ae16898e973a510a5ad5a0d824d28?method=download&shareKey=755b3327cffa51b85070373b8bf1777b"></image>
         </view>
     </view>
    </view>

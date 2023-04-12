@@ -7,7 +7,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        image:'../../assets/image/壁纸6.png',
+        image:'https://note.youdao.com/yws/api/personal/file/WEBc8d18ed4ba67ba404135fe5a0649f9c9?method=download&shareKey=c67b1659e192e1c095275bdc9bae446d',
         detailId:0,
         detail:{}
     },

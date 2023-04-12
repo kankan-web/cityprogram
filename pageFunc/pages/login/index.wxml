@@ -1,0 +1,48 @@
+<view class="content">
+    <view class="head">
+        <text class="title">欢迎登录</text>
+        <text class="tip">智慧物业小程序</text>
+    </view>
+   <view class="main">
+       <view class="logo">
+           logo
+       </view>
+       <view class="descript">
+           <view class="descript-title">
+               请绑定手机号
+           </view>
+           以便我们为您提供更好的服务
+       </view>
+        <!-- <button 
+            class="btn" 
+            open-type="getPhoneNumber" 
+            style="width: 80vw; background-color:#2cc793;color: white;"
+            bindgetphonenumber="getPhoneNumber">
+            微信一键登陆
+        </button> -->
+        <button class="btn" 
+                bindtap="handleLogin"
+                data-type="0"
+                style="width: 40vw; background-color:#2cc793;color: white;">
+                用户登陆
+        </button>
+        <button class="btn" 
+                bindtap="handleLogin"
+                data-type="2"
+                style="width: 40vw; background-color:#2cc793;color: white;">
+                保安登陆
+        </button>
+        <button class="btn" 
+                bindtap="handleLogin"
+                data-type="1"
+                style="width: 40vw; background-color:#2cc793;color: white;">
+                维修人员登陆
+        </button>
+        <checkbox-group class="agreement" bindchange="handleAgreement">
+            <label class="radio">
+                <checkbox value="同意" checked="{{isAgree}}" />阅读并同意
+                <navigator class="nav" url="/pageFunc/pages/privacy/index">《智慧物业隐私政策》</navigator>
+            </label>
+        </checkbox-group>
+    </view>
+</view>

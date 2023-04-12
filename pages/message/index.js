@@ -1,12 +1,16 @@
 import {myRequest,newUrl} from '../../utils/request'
 Page({
     data: {
+        
         title:[{
             titleId:0,
             name:'全部',
         },{
             titleId:1,
             name:'需处理',
+        },{
+            titleId:2,
+            name:'需反馈',
         },{
             titleId:3,
             name:'已完结',
@@ -26,7 +30,7 @@ Page({
     },
     onShow(){
         let _this=this;
-        let value = wx.getStorageSync('type')
+        let type = wx.getStorageSync('type')
         const isLogin = wx.getStorageSync('isLogin')
         //表示已经登陆的情况下
         if(isLogin){
@@ -34,8 +38,7 @@ Page({
                 islogin:true
             })
         }
-        // 表示用户的情况下
-        if(!value){
+        if(type==1||type==2){
             _this.setData({
                 title:[{
                     titleId:0,
@@ -44,12 +47,9 @@ Page({
                     titleId:1,
                     name:'需处理',
                 },{
-                    titleId:2,
-                    name:'需反馈',
-                },{
                     titleId:3,
                     name:'已完结',
-                }]
+                }],
             })
         }
         _this.getAllMessageListUser(_this.data.pageAll);
@@ -86,47 +86,52 @@ Page({
     //获取all中的信息 用户、保安、巡检
     async getAllMessageListUser(currentPage){
         let _this=this;
-        const type = wx.getStorageSync('type');
-        const id = wx.getStorageSync('userId');
         const info =await this.getdetail(-1,currentPage);
-        _this.setData({
-            all:[..._this.data.all,...info],
-            pageAll:currentPage+1
-        })
+        console.log('info',info)
+        if(info.code==200){
+            _this.setData({
+                all:[..._this.data.all,...info],
+                pageAll:currentPage+1
+            })
+        }
     },
     //获取wait中的列表 用户、保安、维修
     async getWaitMessageList(currentPage){
         let _this=this;
-        const type = wx.getStorageSync('type');
-        const id = wx.getStorageSync('userId');
         const info =await this.getdetail(0,currentPage)
-        _this.setData({
-            wait:[..._this.data.wait,...info],
-            pageWait:currentPage+1
-        })
+        if(info.code==200){
+            _this.setData({
+                wait:[..._this.data.wait,...info],
+                pageWait:currentPage+1
+            })
+        }
     },
     //获取feedback中的列表 用户
     async getFeedbackMessageList(currentPage){
         let _this=this;
-        const id = wx.getStorageSync('userId');
         const info = await this.getdetail(1,currentPage)
-        _this.setData({
-            feedback:[..._this.data.feedback,...info],
-            pageFeedback:currentPage+1
-        })
+        if(info.code==200){
+            _this.setData({
+                feedback:[..._this.data.feedback,...info],
+                pageFeedback:currentPage+1
+            })
+        }
     },
     //获取finish中的列表 用户、保安、维修
     async getFinishMessageList(currentPage){
         let _this=this;
         const info =await this.getdetail(2,currentPage)
-        _this.setData({
-            finish:[..._this.data.finish,...info],
-            pageFinish:currentPage+1
-        })
+        if(info.code==200){
+            _this.setData({
+                finish:[..._this.data.finish,...info],
+                pageFinish:currentPage+1
+            })
+        }
     },
     async getdetail(progress,currentPage){
         const type = wx.getStorageSync('type');
         const id = wx.getStorageSync('userId');
+        if(!id) return;
         const pigeSize = 4; 
         let name='';
         let url;

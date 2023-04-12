@@ -56,8 +56,13 @@
     font-size: 40rpx;
     font-weight: 700;
 }
-.btn{
+/* .btn{
     margin-top: 6vh;
+    background-color:2cc793;
+    width: 80vw;
+} */
+.btn{
+    margin-top: 3vh;
     background-color:2cc793;
     width: 80vw;
 }
@@ -65,4 +70,8 @@
 .agreement{
     margin-top: 4vh;
     text-align: center;
+}
+.nav{
+    display: inline;
+    color: #006ef9;
 }

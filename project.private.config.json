@@ -86,13 +86,6 @@
                     "scene": null
                 },
                 {
-                    "name": "login",
-                    "pathName": "pages/login/index",
-                    "query": "",
-                    "launchMode": "default",
-                    "scene": null
-                },
-                {
                     "name": "postsuccess",
                     "pathName": "pages/postsuccess/index",
                     "query": "",
@@ -123,6 +116,13 @@
                 {
                     "name": "login",
                     "pathName": "pages/login/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "login",
+                    "pathName": "pageFunc/pages/login/index",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

@@ -57,7 +57,31 @@
             <image src="/assets/image/右箭头.png"></image>
           </view>
         </view>
-        
+        <view class="service-item"
+              bindtap="handleNavTo"
+              data-src='privacy'
+        >
+          <view class="service-icon-left">
+            <image src="/assets/image/帮助.png"></image>
+          </view>
+            隐私策略
+            <view class="service-icon-right">
+            <image src="/assets/image/右箭头.png"></image>
+          </view>
+        </view>
+        <view class="service-item"
+              bindtap="handleNavTo"
+              data-src='exit'
+              wx:if="{{isLogin}}"
+        >
+          <view class="service-icon-left">
+            <image src="/assets/image/帮助.png"></image>
+          </view>
+            退出账号
+            <view class="service-icon-right">
+            <image src="/assets/image/右箭头.png"></image>
+          </view>
+        </view>
     </view>
     
     <view class="inform">

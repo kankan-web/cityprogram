@@ -13,7 +13,8 @@
       </view>
       <view class="address">
         <view class="address-icon">
-            <image src="/assets/image/收货地址.png"></image>
+            <!-- <image src="/assets/image/收货地址.png"></image> -->
+            <image src="/assets/image/收货地址.png" mode=""/>
         </view>
         {{messageItem.adeviceAddress}}
       </view>
